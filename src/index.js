@@ -1,7 +1,5 @@
 import React from "react"
 
-import './styles.css'
-
 class Toggle extends React.Component {
 
   constructor( props )
@@ -14,38 +12,53 @@ class Toggle extends React.Component {
 
     this.displayName = "Toggle";
 
-    this.onChange = this.onChange.bind(this);
+    this.onToggle = this.onToggle.bind( this );
 
   }
 
   render()
   {
     const {
-      id,
-      name = "switch-button",
-      label,
-      labelRight,
-      className,
-      checked = false,
-      defaultChecked,
-      mode = "switch",
-      theme = "rsbc-switch-button-flat-round",
-      disabled,
-      ...others
-    } = this.props;
+            id,
+            name    = "toggle",
+            label,
+            labelRight,
+            className,
+            checked = false,
+            defaultChecked,
+            mode    = "toggle",
+            theme   = "round",
+            disabled,
+            ...others
+          } = this.props;
+
+    // backward compatibility
+    const bcTheme = {
+      round                            : "rsbc-switch-button-flat-round",
+      square                           : "rsbc-switch-button-flat-square",
+      "rsbc-switch-button-flat-round"  : "rsbc-switch-button-flat-round",
+      "rsbc-switch-button-flat-square" : "rsbc-switch-button-flat-square",
+    };
+
+    // backward compatibility
+    const bcMode = {
+      toggle   : "switch",
+      "switch" : "switch",
+      select   : "select",
+    };
 
     const classes = [
       className,
       "rsbc-switch-button",
-      `rsbc-mode-${mode}`,
-      theme,
+      `rsbc-mode-${bcMode[ mode ]}`,
+      bcTheme[ theme ],
       disabled ? " disabled" : ""
     ];
 
     return (
-      <div {...others} className={classes.join(" ").trim()}>
+      <div {...others} className={classes.join( " " ).trim()}>
         {label ? <label htmlFor={id ? id : name}>{label}</label> : null}
-        <input onChange={this.onChange}
+        <input onChange={this.onToggle}
                checked={this.state.checked}
                disabled={disabled}
                id={id ? id : name}
@@ -68,17 +81,18 @@ class Toggle extends React.Component {
     );
   }
 
-  onChange( evt )
+  onToggle( evt )
   {
+    this.props.onChange( !this.state.checked ); // backward compatibility
+    this.props.onToggle( !this.state.checked, evt );
 
-    this.props.onChange( !this.state.checked );
-
-    this.setState({checked : !this.state.checked});
+    this.setState( { checked : !this.state.checked } );
   }
 }
 
 Toggle.defaultProps = {
-  onChange : () => {}
-}
+  onChange : () => {}, // backward compatibility
+  onToggle : () => {}
+};
 
 export default Toggle;
