@@ -1,6 +1,6 @@
 {
   "name": "react-toggle-component",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": false,
   "description": "A React UI Component to display an awesome Toggle Button control",
   "main": "dist/index.js",

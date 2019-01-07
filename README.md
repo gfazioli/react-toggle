@@ -80,7 +80,7 @@ Of course, you can create a left label, a right label, or both
 
 ## Default styles
 
-Youmay import the default styles by using
+You may import the default styles by using
 
 ```jsx
 import "react-toggle-component/styles.css"
@@ -110,9 +110,15 @@ You can use `onToggle` event to get when the toggle changes
 <Toggle checked={this.state.checked} onToggle={value => this.setState({checked:value})} />
 ```
 
+or
+
+```jsx
+<Toggle checked={this.state.checked} onToggle={(value,event) => this.setState({checked:value})} />
+```
+
 ### Backward compatibility
 
-To mainteince the backward compatibility you may continue to use `onChange` handler
+To maintenance the backward compatibility you may continue to use `onChange` handler
 
 ```jsx
 <Toggle checked={this.state.checked} onChange={value => this.setState({checked:value})} />
@@ -150,9 +156,11 @@ You can also use the toggle as selected component. This mode is useful when you 
 | `theme`      | string | The toggle appearance theme. Possible values are `round` or `square`. Default `round`. |
 | `disabled` | boolean | If `true` the toggle is disabled. Default `false`. |
 
+> ⚠️ You have to set the `name` props to unique value when you are using multiple toggles in your page.
+
 ## Contributing
 
-Thanks for any your contribute 👏🏻.
+Thanks for any your contribute 👏.
 
 ## Bugs 🐛
 

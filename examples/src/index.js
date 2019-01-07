@@ -22,7 +22,7 @@ class App extends React.Component {
     };
   }
 
-  onToggle( e )
+  onToggle( e, evt )
   {
     const theme = (this.state.theme === "square") ? "round" : "square";
 
