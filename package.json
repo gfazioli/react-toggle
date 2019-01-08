@@ -4,6 +4,7 @@
   "private": false,
   "description": "A React UI Component to display an awesome Toggle Button control",
   "main": "dist/index.js",
+  "types": "index.d.ts",
   "keywords": [
     "toggle",
     "component",
@@ -25,7 +26,8 @@
     "prepublishOnly": "npm run transpile",
     "build": "webpack --mode production",
     "deploy": "gh-pages -d examples/dist",
-    "publish-demo": "npm run build && npm run deploy"
+    "publish-demo": "npm run build && npm run deploy",
+    "update-types": "tsc src/index.js --declaration --jsx react --emitDeclarationOnly"
   },
   "author": "Giovambattista Fazioli",
   "license": "MIT",
