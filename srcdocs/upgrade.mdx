@@ -1,0 +1,67 @@
+---
+name: Upgrade from previous version
+route: /upgrade
+---
+
+# Upgrade from previous version
+
+## Upgrade from 1.x version
+
+This version is not fully compatible with the previous 1.x versions. Anyway, you may update your code easly
+
+## Labels
+
+First of all, we've removed the embeded labels. In the previous version you had
+
+```jsx
+<Toggle label="Left label" />
+```
+
+Now you may use the following for the left label
+
+```jsx
+<label htmlFor="toggle-a">
+  Click me
+  <Toggle name="toggle-a" />
+</label>
+```
+
+And the following code for the right label
+
+```jsx
+<label htmlFor="toggle-b">
+  <Toggle name="toggle-b" />
+  Click me
+</label>
+```
+
+## Events
+
+The previous `onChange` event become `onToggle`
+
+```jsx
+  <Toggle name="toggle-c" onToggle={e => console.log(e.target.checked)} />
+```
+
+The new `onToggle` event, has got only one param, I mean, the standard `event` object.
+In fact, you will be able to get all information about the toggle by using `e.target` as shown above.
+
+In addition, you may use the new `onRight` event. It's trigged when the toggle is switched from the left to the right. In short, when it's **on** (usually).
+
+```jsx
+  <Toggle name="toggle-c" onRight={e => console.log(e.target.name)} />
+```
+
+Of course, there is also the `onLeft` event. It's trigged when the toggle is switched from the right to the left. In short, when it's **off** (usually).
+
+```jsx
+  <Toggle name="toggle-c" onLeft={e => console.log(e.target.name)} />
+```
+
+## Mode prop
+
+The props `mode` is no longer available. This because in the previous version the `mode="switch"` was keeping the "on" and "off" appearance colours the same. Now, you can do the same by using the new props `backgroundColor` and `backgroundColorRight`, as well as `color` and `colorRight`.
+
+## Theme prop
+
+We have removed the `theme` prop as well. Now, you'll be able to create any toggle by using the new props for the appearance and the theme provider.

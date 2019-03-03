@@ -1,0 +1,44 @@
+---
+name: Toggle
+route: /components/toggle
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import Toggle from '../../../src/components/Toggle'
+import {ToggleExample} from './ToggleExample'
+
+# Toggle
+
+The Toggle component...
+
+<ToggleExample/>
+
+## Props
+
+<PropsTable of={Toggle} />
+
+## Playground
+
+<Playground>
+  <label htmlFor="toggle-1">
+    Left label
+    <Toggle name="toggle-1" />
+  </label>
+</Playground>
+
+Right label
+
+<Playground>
+  <label htmlFor="toggle-2">
+    <Toggle name="toggle-2" />
+    Right label
+  </label>
+</Playground>
+
+<Playground>
+  <label htmlFor="toggle-3">
+    Disabled
+    <Toggle name="toggle-3" disabled />
+  </label>
+</Playground>

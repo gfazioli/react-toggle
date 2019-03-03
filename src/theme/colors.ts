@@ -1,0 +1,4 @@
+// Defines colors
+export default {
+
+};
