@@ -124,7 +124,7 @@ class Application extends React.Component {
         label  : "Add left and right label",
         code   : `<Toggle name="toggle-7" 
         label="Both" 
-        label_right="Click me" 
+        labelRight="Click me" 
         checked={true} />`,
         object : <Toggle name="toggle-7"
                          theme={this.state.theme}
