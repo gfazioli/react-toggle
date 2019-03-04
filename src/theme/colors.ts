@@ -1,4 +1,0 @@
-// Defines colors
-export default {
-
-};

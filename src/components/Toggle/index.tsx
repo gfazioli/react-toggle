@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useRef } from "react";
+import React, {FunctionComponent, useRef} from "react";
 import styled from "styled-components";
 import defaultTheme from "../../theme/theme";
 
@@ -32,7 +32,7 @@ interface Props {
    */
   disabled?: boolean;
   /**
-   * Trigged when the checkbox change
+   * Trigged when the toggle change
    *
    * @param {React.ChangeEvent} e
    */
@@ -45,69 +45,109 @@ interface Props {
    * Trigged when the toggle is on the right.
    */
   onLeft?: (e: React.ChangeEvent) => void;
-  /**
-   * Default Background color
-   */
-  backgroundColor?: string;
-  /**
-   * Background color when the toggle turned on
-   */
-  backgroundColorRight?: string;
-  /**
-   * Background color when the toggle is disabled
-   *
-   */
-  backgroundColorDisabled?: string;
-  /**
-   * Radius of container
-   *
-   * @default 8px
-   */
-  backgroundRadius?: string;
-  /**
-   * Border radius of knob
-   */
-  radius?: string;
-  /**
-   * Color knob
-   */
-  color?: string;
-  /**
-   * Color knob when turned on
-   */
-  colorRight?: string;
+
+  // ---------------------------------------------------------------
+  // Appearance
+  // ---------------------------------------------------------------
+
   /**
    * Width of component
    */
   width?: string;
   /**
-   * Width of knob
-   */
-  widthKnob?: string;
-  /**
    * Height of component
    */
   height?: string;
+  
+  // ---------------------------------------------------------------
+  // Border
+  // ---------------------------------------------------------------
+  
   /**
-   * Height of knob
-   */
-  heightKnob?: string;
-  /**
-   * Border width when on the left. Set to 0 for no border
+   * Border width
    */
   borderWidth?: string;
   /**
-   * Border wifth when on the right. Set to 0 for no border
-   */
-  borderWidthRight?: string;
-  /**
-   * Border color when on the left. You may use transparent as well
+   * Border color for both knob position. This props will override leftBorderColor and rightBorderColor props
    */
   borderColor?: string;
   /**
-   * Border color when on the left. You may use transparent as well
+   * Border color when the knob is on the left (usually off)
    */
-  borderColorRight?: string;
+  leftBorderColor?: string;
+  /**
+   * Border color when the knob is on the right (usually on)
+   */
+  rightBorderColor?: string;
+
+  // ---------------------------------------------------------------
+  // Background color
+  // ---------------------------------------------------------------
+  
+  /**
+   * Background color for both knob position. This props will override leftBackgroundColor and rightBackgroundColor props
+   */
+  backgroundColor?: string;
+  /**
+   * Background color when the knob is on the left (usually off)
+   */
+  leftBackgroundColor?: string;
+  /**
+   * Background color when the knob is on the right (usually on)
+   */
+  rightBackgroundColor?: string;
+
+  /**
+   * Background color when the toggle is disabled
+   */
+  backgroundColorDisabled?: string;
+
+  // ---------------------------------------------------------------
+  // Radius
+  // ---------------------------------------------------------------
+
+  /**
+   * Radius of container
+   *
+   */
+  radius?: string;
+  /**
+   * Radius of gap
+   */
+  radiusBackground?: string;
+  /**
+   * Border radius of knob
+   */
+  knobRadius?: string;
+
+  // ---------------------------------------------------------------
+  // Knob
+  // ---------------------------------------------------------------
+
+  /**
+   * Knob width
+   */
+  knobWidth?: string;
+  /**
+   * Knob height
+   */
+  knobHeight?: string;
+  /**
+   * Knob gap. It's the distance from the border/background
+   */
+  knobGap?: string;
+  /**
+   * Knob color for both knob position. This props will override the leftKnobColor and rightKnobColor
+   */
+  knobColor?: string;
+  /**
+   * Knob color when it's on the left (usually off)
+   */
+  leftKnobColor?: string;
+  /**
+   * Knob color when it's on the right (usually on)
+   */
+  rightKnobColor?: string;
 }
 
 const ToggleContainer = styled.label``;
@@ -137,25 +177,37 @@ const ToggleBase = styled.span<Props>`
       width: ${p => p.width || (p.theme && p.theme.width) || defaultTheme.width};
       height: ${p => p.height || (p.theme && p.theme.height) || defaultTheme.height};
       background-color: ${p =>
-        p.backgroundColor || (p.theme && p.theme.backgroundColor) || defaultTheme.backgroundColor};
-      border:none;
-      border-radius:${p => p.backgroundRadius || (p.theme && p.theme.backgroundRadius) || defaultTheme.backgroundRadius}
+  p.borderColor || p.leftBorderColor || (p.theme && p.theme.leftBorderColor) || defaultTheme.leftBorderColor};
+      border-radius:${p => p.radius || (p.theme && p.theme.radius) || defaultTheme.radius};
       cursor:pointer;
       transition : background ease-out 0.3s;
-      box-shadow: 0 0 0 ${p =>
-        p.borderWidth || (p.theme && p.theme.borderWidth) || defaultTheme.borderWidth} inset ${p =>
-  p.borderColor || (p.theme && p.theme.borderColor) || defaultTheme.borderColor};
       
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius:${p => p.radiusBackground || (p.theme && p.theme.radiusBackground) || defaultTheme.radiusBackground};
+        width: calc(${p => p.width || (p.theme && p.theme.width) || defaultTheme.width} - 2*${p =>
+  p.borderWidth || (p.theme && p.theme.borderWidth) ||
+  defaultTheme.borderWidth});
+        height: calc(${p => p.height || (p.theme && p.theme.height) || defaultTheme.height} - 2*${p =>
+  p.borderWidth || (p.theme && p.theme.borderWidth) ||
+  defaultTheme.borderWidth});
+        background-color: ${p => p.backgroundColor || (p.theme && p.theme.backgroundColor) || defaultTheme.backgroundColor};
+        left:${p => p.borderWidth || (p.theme && p.theme.borderWidth) || defaultTheme.borderWidth};
+      }
+
       &:after {
         display:block;
         position:absolute;
         content: "";
-        width: ${p => p.widthKnob || (p.theme && p.theme.widthKnob) || defaultTheme.widthKnob};
-        height: ${p => p.heightKnob || (p.theme && p.theme.heightKnob) || defaultTheme.heightKnob};
-        border-radius: ${p => p.radius || (p.theme && p.theme.radius) || defaultTheme.radius};
-        background-color: ${p => p.color || (p.theme && p.theme.color) || defaultTheme.color};
-        margin-left:calc(${p => p.borderWidth || (p.theme && p.theme.borderWidth) || defaultTheme.borderWidth} + 1px);
+        width: ${p => p.knobWidth || (p.theme && p.theme.knobWidth) || defaultTheme.knobWidth};
+        height: ${p => p.knobHeight || (p.theme && p.theme.knobHeight) || defaultTheme.knobHeight};
+        border-radius: ${p => p.knobRadius || (p.theme && p.theme.knobRadius) || defaultTheme.knobRadius};
+        background-color: ${p =>
+  p.knobColor || p.leftKnobColor || (p.theme && p.theme.leftKnobColor) || defaultTheme.leftKnobColor};
         transition : all ease-out 0.4s;
+        margin-left:${p => p.knobGap || (p.theme && p.theme.knobGap) || defaultTheme.knobGap};
       }
     }
     
@@ -163,26 +215,34 @@ const ToggleBase = styled.span<Props>`
     &:checked {
       & + label {
         background-color: ${p =>
-          p.backgroundColorRight || (p.theme && p.theme.backgroundColorRight) || defaultTheme.backgroundColorRight};
-              box-shadow: 0 0 0 ${p =>
-                p.borderWidthRight ||
-                (p.theme && p.theme.borderWidthRight) ||
-                defaultTheme.borderWidthRight} inset ${p =>
-  p.borderColorRight || (p.theme && p.theme.borderColorRight) || defaultTheme.borderColorRight};
+  p.borderColor ||
+  p.rightBorderColor ||
+  (p.theme && p.theme.rightBorderColor) ||
+  defaultTheme.rightBorderColor};
+        
+        &:before {
+          background-color: ${p =>
+  p.backgroundColor ||
+  p.rightBackgroundColor ||
+  (p.theme && p.theme.rightBackgroundColor) ||
+  defaultTheme.rightBackgroundColor};
+        }
         
         &:after {
-          margin-left:calc(100% - ${p => p.widthKnob || (p.theme && p.theme.widthKnob) || defaultTheme.widthKnob} - ${p => p.borderWidthRight || (p.theme && p.theme.borderWidthRight) || defaultTheme.borderWidthRight} - 1px);
+          margin-left:calc(100% - ${p =>
+  p.knobWidth || (p.theme && p.theme.knobWidth) || defaultTheme.knobWidth} - ${p => p.knobGap || (p.theme && p.theme.knobGap) || defaultTheme.knobGap});
           transition : all ease-out 0.2s;
-          background-color: ${p => p.colorRight || (p.theme && p.theme.colorRight) || defaultTheme.colorRight};
+          background-color: ${p =>
+  p.knobColor || p.rightKnobColor || (p.theme && p.theme.rightKnobColor) || defaultTheme.rightKnobColor};
         }
       }
       
       &:disabled {
         & + label {
           background-color: ${p =>
-            p.backgroundColorDisabled ||
-            (p.theme && p.theme.backgroundColorDisabled) ||
-            defaultTheme.backgroundColorDisabled};
+  p.backgroundColorDisabled ||
+  (p.theme && p.theme.backgroundColorDisabled) ||
+  defaultTheme.backgroundColorDisabled};
           &:after {
             box-shadow: none;
           }
@@ -194,12 +254,16 @@ const ToggleBase = styled.span<Props>`
     &:disabled {
       & + label {
         background-color: ${p =>
-          p.backgroundColorDisabled ||
-          (p.theme && p.theme.backgroundColorDisabled) ||
-          defaultTheme.backgroundColorDisabled};
+  p.backgroundColorDisabled ||
+  (p.theme && p.theme.backgroundColorDisabled) ||
+  defaultTheme.backgroundColorDisabled};
         cursor:default;
         &:after {
           box-shadow: none;
+          background-color: ${p =>
+            p.backgroundColorDisabled ||
+            (p.theme && p.theme.backgroundColorDisabled) ||
+            defaultTheme.backgroundColorDisabled};;
         }
       }
     }
@@ -251,7 +315,7 @@ const Toggle: FunctionComponent<Props> = props => {
         value={value}
         disabled={disabled}
       />
-      <ToggleContainer htmlFor={name} />
+      <ToggleContainer htmlFor={name}/>
     </ToggleBase>
   );
 };
