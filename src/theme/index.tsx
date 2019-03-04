@@ -4,15 +4,16 @@
  */
 import React, {FunctionComponent} from 'react';
 import {ThemeProvider} from "styled-components";
-import theme from "./theme";
+import defaultTheme from "./theme";
 
 
 interface Props {
+  theme?:any;
   children?: React.ReactChild;
 }
 
-const SULUThemeProvider: FunctionComponent<Props> = ({children}) => <ThemeProvider theme={theme}>
+const ReactToggleThemeProvider: FunctionComponent<Props> = ({children,theme}) => <ThemeProvider theme={theme || defaultTheme}>
   {children}
 </ThemeProvider>;
 
-export default SULUThemeProvider;
+export default ReactToggleThemeProvider;
