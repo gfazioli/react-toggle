@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "outDir": "dist/lib",
+    "outDir": "dist",
     "module": "commonjs",
     "target": "es5",
-    "lib": [ "es5", "es6", "es7", "es2017", "dom" ],
+    "lib": ["es5", "es6", "es7", "es2017", "dom"],
     "sourceMap": true,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDirs": [ "src" ],
+    "rootDirs": ["src"],
     "baseUrl": ".",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
@@ -21,8 +21,9 @@
     "experimentalDecorators": true,
     // if you want to build a lib, you need declarations to be true and allow js to be false
     "allowJs": false,
-    "declaration": true
+    "declaration": true,
+    "skipLibCheck": true
   },
-  "include": [ "src/**/*" ],
-  "exclude": [ "node_modules", "build", "scripts", "config" ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "build", "scripts", "config"]
 }
