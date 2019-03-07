@@ -12,7 +12,7 @@ This component is designed to render an awesome switch/toggle component.
 
 ## Upgrade Guide
 
-If you're using the previous version 1.x, have a look at [Upgrade to 2.0 from 1.x](https://gfazioli.github.io/react-toggle/upgrade) before upgrade
+If you're using the previous version 1.x, have a look at [Upgrade to 2.0 from 1.x](https://gfazioli.github.io/react-toggle) before upgrade
 
 ## Installation
 
