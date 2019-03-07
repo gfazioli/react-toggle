@@ -10,8 +10,6 @@ export function ToggleExample() {
     <DocsExample>
       <h1>Toggle Example</h1>
 
-      <h2>Simple Toggle</h2>
-
       <p>
         <label htmlFor={"toggle-b"}>
           Click me

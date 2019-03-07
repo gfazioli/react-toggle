@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const DocsExample = styled.div`
-  background-color: #fafafa;
+  background-color: #fff;
   border:1px solid #aaa;
   border-radius:8px;
   margin: 16px auto;
