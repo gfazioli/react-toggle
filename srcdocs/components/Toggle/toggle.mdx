@@ -46,3 +46,17 @@ Right label
     <Toggle name="toggle-3" disabled />
   </label>
 </Playground>
+
+<Playground>
+  <label htmlFor="toggle-4">
+    <Toggle
+      leftBackgroundColor="tomato"
+      rightBackgroundColor="green"
+      borderColor="tomato"
+      knobColor="white"
+      name="toggle-4"
+      onToggle={e => console.log("onToggle", e.target.checked)}
+    />
+    Right label
+  </label>
+</Playground>
