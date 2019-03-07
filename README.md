@@ -10,6 +10,10 @@ This component is designed to render an awesome switch/toggle component.
 * Removed the import styles
 * New props
 
+## Upgrade Guide
+
+If you're using the previous version 1.x, have a look at [Upgrade to 2.0 from 1.x](https://gfazioli.github.io/react-toggle/upgrade) before upgrade
+
 ## Installation
 
 You can use either **npm**

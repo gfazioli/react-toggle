@@ -61,7 +61,12 @@ Of course, you can set the knob gap
 
 ## Theme Provider
 
-Instead of change every single props, you might use the `ReactToggleThemeProvider`.
+Instead of change every single props, you might use the `ReactToggleThemeProvider`
+
+```jsx
+import {ReactToggleThemeProvider} from "react-toggle-component";
+```
+
 The current default theme is the following
 
 ```jsx
@@ -97,7 +102,7 @@ export default {
 <Playground>
   <ReactToggleThemeProvider theme={{ backgroundColor:"#0f0"}}>
     <div>
-      <p>All toggle children will use the ame theme</p>
+      <p>All toggle children will use the same theme</p>
       <Toggle name="t-p1" />
       <Toggle name="t-p2" />
       <Toggle name="t-p3" />
