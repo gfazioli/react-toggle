@@ -1,0 +1,48 @@
+---
+name: Toggle
+route: /components/toggle
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import Toggle from '../../../src/components/Toggle'
+import {ToggleExample} from './ToggleExample'
+
+# Toggle
+
+The Toggle component is an useful replacement to the standar input checkbox component.
+Anyway, remember that the toggle component is an extension of the input checkbox. So, you can use it inside a form as well.
+In fact, remember to use the props `name` when you're using multiple toggle component in your view.
+
+<ToggleExample/>
+
+## Props
+
+<PropsTable of={Toggle} />
+
+## Playground
+
+Click on the button `<>` on the right bottom of panel to edit your code.
+
+<Playground>
+  <label htmlFor="toggle-1">
+    Left label
+    <Toggle name="toggle-1" />
+  </label>
+</Playground>
+
+Right label
+
+<Playground>
+  <label htmlFor="toggle-2">
+    <Toggle name="toggle-2" />
+    Right label
+  </label>
+</Playground>
+
+<Playground>
+  <label htmlFor="toggle-3">
+    Disabled
+    <Toggle name="toggle-3" disabled />
+  </label>
+</Playground>
