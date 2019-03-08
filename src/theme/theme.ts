@@ -16,7 +16,6 @@ export default {
   leftBorderColor: "#aaa",
   rightBorderColor: "#3887b7",
 
-  backgroundColor : "#fff",
   leftBackgroundColor : "#fff",
   rightBackgroundColor : "#fff",
   backgroundColorDisabled : "#eee",
