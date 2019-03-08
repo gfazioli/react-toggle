@@ -1,6 +1,6 @@
 {
   "name": "react-toggle-component",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "private": false,
   "description": "A React UI Component to display an awesome Toggle Button control",
   "main": "dist/index.js",
@@ -8,7 +8,10 @@
     "toggle",
     "component",
     "react",
-    "react-component"
+    "react-component",
+    "docz",
+    "typescript",
+    "hooks"
   ],
   "homepage": "http://gfazioli.github.io/react-toggle/",
   "repository": {
@@ -54,6 +57,7 @@
     "dev": "docz dev",
     "precommit": "tsc --noEmit --project ./config/tsconfig.json && ./node_modules/tslint/bin/tslint './src/**/*.ts{,x}'",
     "docz:dev": "docz dev",
-    "docz:build": "docz build"
+    "docz:build": "docz build",
+    "build" : "yarn postinstall && docz build"
   }
 }

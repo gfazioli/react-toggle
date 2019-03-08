@@ -80,7 +80,6 @@ export default {
   leftBorderColor: "#aaa",
   rightBorderColor: "#3887b7",
 
-  backgroundColor : "#fff",
   leftBackgroundColor : "#fff",
   rightBackgroundColor : "#fff",
   backgroundColorDisabled : "#eee",
@@ -100,7 +99,7 @@ export default {
 ```
 
 <Playground>
-  <ReactToggleThemeProvider theme={{ backgroundColor:"#0f0"}}>
+  <ReactToggleThemeProvider theme={{ leftBackgroundColor:"tomato"}}>
     <div>
       <p>All toggle children will use the same theme</p>
       <Toggle name="t-p1" />
