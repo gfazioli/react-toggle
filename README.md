@@ -65,4 +65,4 @@ Use the GitHub issues.
 
 ## License
 
-MIT Licensed. Copyright (c) Giovambattista Fazioli 2018.
+MIT Licensed. Copyright (c) Giovambattista Fazioli 2019.
