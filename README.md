@@ -1,5 +1,11 @@
 # Overview
 
+![version](https://img.shields.io/npm/v/react-toggle-component.svg)
+![license](https://img.shields.io/npm/l/react-toggle-component.svg)
+![issues](https://img.shields.io/github/issues/gfazioli/react-toggle.svg)
+![type](https://img.shields.io/npm/types/react-toggle-component.svg)
+![last-commit](https://img.shields.io/github/last-commit/gfazioli/react-toggle.svg)
+
 This component is designed to render an awesome switch/toggle component.
 
 ## New in v2.0
