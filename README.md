@@ -41,7 +41,7 @@ First of all, remember to import the component.
 ```jsx
 import React from "react"
 
-import Toggle from "react-toggle-component"
+import {Toggle} from "react-toggle-component"
 
 function Application() {
 
