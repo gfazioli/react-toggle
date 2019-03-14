@@ -1,6 +1,6 @@
 {
   "name": "react-toggle-component",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "private": false,
   "description": "A React UI Component to display an awesome Toggle Button control",
   "main": "dist/index.js",
@@ -25,11 +25,11 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.3.3",
-    "@emotion/cache": "^10.0.0",
-    "@emotion/core": "^10.0.6",
-    "@emotion/styled-base": "^10.0.5",
-    "@types/node": "11.10.5",
-    "@types/react": "16.8.7",
+    "@emotion/cache": "^10.0.9",
+    "@emotion/core": "^10.0.9",
+    "@emotion/styled-base": "^10.0.9",
+    "@types/node": "11.11.3",
+    "@types/react": "16.8.8",
     "@types/react-dom": "16.8.2",
     "@types/styled-components": "^4.1.12",
     "@types/webpack": "4.4.25",
@@ -40,7 +40,7 @@
     "prettier": "1.16.4",
     "ts-loader": "^5.3.0",
     "ts-node": "^8.0.3",
-    "tslint": "^5.13.1",
+    "tslint": "^5.14.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.3.1",
     "webpack": "^4.29.5",
@@ -48,16 +48,15 @@
   },
   "dependencies": {
     "react": "^16.8.4",
-    "react-circle": "^1.1.1",
     "react-dom": "^16.8.4",
     "styled-components": "^4.1.3"
   },
   "scripts": {
     "postinstall": "tsc -p tsconfig.json",
     "dev": "docz dev",
-    "precommit": "tsc --noEmit --project ./config/tsconfig.json && ./node_modules/tslint/bin/tslint './src/**/*.ts{,x}'",
+    "precommit": "tsc --project tsconfig.json && ./node_modules/tslint/bin/tslint './src/**/*.ts{,x}'",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
-    "build" : "yarn postinstall && docz build"
+    "build": "yarn postinstall && docz build"
   }
 }
