@@ -9,6 +9,8 @@
 
 This component is designed to render an awesome switch/toggle component.
 
+https://codesandbox.io/embed/01nxypo6zl?autoresize=1&fontsize=14&hidenavigation=1&view=preview
+
 ## New in v2.0.x
 
 * Use Typescript
