@@ -1,3 +1,4 @@
+import * as React from "react";
 import styled from "styled-components";
 
 export const DocsExample = styled.div`
@@ -44,3 +45,19 @@ export const DocsExample = styled.div`
     box-shadow: 0 0 1px rgba(0,0,0,0.3);
   }
 `;
+
+export function CodeSandbox(id?: string) {
+
+  const styles = {
+    width: "100%",
+    height: "500px",
+    border: "0",
+    borderRadius: "4px",
+    overflow: "hidden"
+
+  }
+
+  return (
+    <iframe src="https://codesandbox.io/embed/01nxypo6zl?fontsize=14" style={styles} sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+  );
+}
