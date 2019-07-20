@@ -21,10 +21,17 @@ interface Props {
   value?: string;
   /**
    * State of checked
+   * Use `defaultChecked` to set the default checked status
    *
    * @default false
    */
   checked?: boolean;
+  /**
+   * Default state of checked. Does not update the checked status if changed
+   *
+   * @default false
+   */
+  defaultChecked?: boolean;
   /**
    * Disable the toogle
    *
@@ -286,6 +293,7 @@ const Toggle: FunctionComponent<Props> = props => {
     className,
     name,
     checked = false,
+    defaultChecked = false,
     disabled = false,
     value = "",
     onToggle = () => true,
@@ -318,7 +326,8 @@ const Toggle: FunctionComponent<Props> = props => {
         ref={inputRef}
         onChange={onChangeHandler}
         type={"checkbox"}
-        defaultChecked={checked}
+        defaultChecked={defaultChecked}
+        checked={checked}
         id={name}
         name={name}
         value={value}
