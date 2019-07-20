@@ -320,10 +320,8 @@ const Toggle: FunctionComponent<Props> = props => {
   };
 
   const checkedProp = (controlled: boolean) => {
-    return (
-      controlled ? {checked: checked} : {defaultChecked: checked}
-    )
-  }
+    return controlled ? { checked } : { defaultChecked: checked };
+  };
 
   return (
     <ToggleBase className={cs} {...others}>
