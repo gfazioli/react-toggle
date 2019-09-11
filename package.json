@@ -52,7 +52,7 @@
     "styled-components": "^4.2.0"
   },
   "scripts": {
-    "postinstall": "tsc -p tsconfig.json",
+    "prepare": "tsc -p tsconfig.json",
     "dev": "docz dev",
     "precommit": "tsc --project tsconfig.json && ./node_modules/tslint/bin/tslint './src/**/*.ts{,x}'",
     "docz:dev": "docz dev",
