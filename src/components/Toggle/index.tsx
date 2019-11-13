@@ -1,10 +1,10 @@
-import React, { FunctionComponent, useRef } from "react";
+import React, { forwardRef, FunctionComponent, useRef } from "react";
 import styled from "styled-components";
 import defaultTheme from "../../theme/theme";
 
 interface Props {
   /**
-   * Addition classes
+   * Addition CSS classes
    */
   className?: string;
   /**
@@ -165,7 +165,7 @@ const ToggleBase = styled.span<Props>`
   align-items: center;
   width: ${p => p.width || (p.theme && p.theme.width) || defaultTheme.width};
   height: ${p => p.height || (p.theme && p.theme.height) || defaultTheme.height};
-  vertical-align: text-top;
+  vertical-align: middle;
   margin: 0 4px;
 
   input[type="checkbox"] {
@@ -285,9 +285,7 @@ const ToggleBase = styled.span<Props>`
   }
 `;
 
-const Toggle: FunctionComponent<Props> = props => {
-  const inputRef = useRef(null);
-
+const Toggle: FunctionComponent<Props> = (props, ref) => {
   const {
     className,
     name,
@@ -301,12 +299,10 @@ const Toggle: FunctionComponent<Props> = props => {
     ...others
   } = props;
 
-  const cs = ["react-toggle", className || ""].join(" ");
+  const cls = ["react-toggle", className || ""].join(" ");
 
   const onChangeHandler = (e: React.ChangeEvent) => {
     if (!!onToggle) {
-      // const i: any = inputRef.current;
-      // console.log("onToggle", i.checked);
       onToggle(e);
 
       const target = e.target as HTMLInputElement;
@@ -324,9 +320,9 @@ const Toggle: FunctionComponent<Props> = props => {
   };
 
   return (
-    <ToggleBase className={cs} {...others}>
+    <ToggleBase className={cls} {...others}>
       <input
-        ref={inputRef}
+        ref={ref}
         onChange={onChangeHandler}
         type={"checkbox"}
         id={name}
@@ -340,4 +336,4 @@ const Toggle: FunctionComponent<Props> = props => {
   );
 };
 
-export default Toggle;
+export default forwardRef(Toggle);

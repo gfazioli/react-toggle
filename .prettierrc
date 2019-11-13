@@ -1,4 +1,5 @@
 {
+  "useTabs": false,
   "arrowParens": "avoid",
   "bracketSpacing": true,
   "htmlWhitespaceSensitivity": "css",
@@ -11,6 +12,5 @@
   "proseWrap": "preserve",
   "singleQuote": false,
   "tabWidth": 2,
-  "trailingComma": "all",
-  "useTabs": false
+  "trailingComma": "all"
 }
