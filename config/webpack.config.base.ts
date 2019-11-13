@@ -18,7 +18,7 @@ const BaseConfig: webpack.Configuration = {
                 options: {
                   configFile: resolve(__dirname, "..", "tsconfig.json"),
                 },
-              }
+              },
             ],
           },
         ],

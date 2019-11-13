@@ -1,11 +1,15 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
-    "lib": [ "es2017" ],
+    "lib": [
+      "es2017"
+    ],
     "skipLibCheck": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,

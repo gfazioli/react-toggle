@@ -1,14 +1,7 @@
-// doczrc.js
-
 export default {
-  description: "React Toggle documentation and playground",
-  dest: "./docs",
-  themeConfig: {
-    colors: {
-      primary: "tomato",
-    },
-  },
-  codeSandbox: false,
+  typescript: true,
   title: "React Toggle",
-  typescript: true
+  description: "React Toggle documentation and playground",
+  base: "/react-toggle",
+  ignore: ["README.md", 'readme.md', 'changelog.md', 'code_of_conduct.md', 'contributing.md', 'license.md']
 }
