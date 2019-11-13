@@ -1,6 +1,6 @@
 {
   "name": "react-toggle-component",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A React UI Component to display an awesome Toggle Button control",
   "private": false,
   "main": "dist/index.js",
@@ -31,13 +31,13 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.4.3",
-    "@types/node": "12.12.5",
+    "@types/node": "12.12.7",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
     "@types/styled-components": "^4.1.19",
     "@types/webpack": "4.39.8",
     "babel-loader": "^8.0.4",
-    "prettier": "1.18.2",
+    "prettier": "1.19.1",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.0.3",
     "tslint": "^6.0.0-beta0",
@@ -60,6 +60,7 @@
     "styled-components": "*"
   },
   "scripts": {
+    "postinstall": "tsc -p tsconfig.json",
     "dev": "docz dev",
     "build": "docz build",
     "production": "tsc --project tsconfig.json && git add dist && ./node_modules/tslint/bin/tslint './src/**/*.ts{,x}'"
