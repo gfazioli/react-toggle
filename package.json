@@ -1,6 +1,6 @@
 {
   "name": "react-toggle-component",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "A React UI Component to display an awesome Toggle Button control",
   "private": false,
   "main": "dist/index.js",
@@ -39,19 +39,24 @@
     "typescript": "3.7.2",
     "typescript-styled-plugin": "^0.15.0",
     "webpack": "^4.29.5",
-    "webpack-cli": "^3.3.0"
-  },
-  "dependencies": {
-    "@emotion/core": "^10.0.14",
-    "@emotion/styled": "^10.0.14",
-    "docz": "^v2.0.0-rc.71",
-    "gatsby": "^2.17.8",
-    "gatsby-theme-docz": "^2.0.0-rc.71",
+    "webpack-cli": "^3.3.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-use": "^13.2.1",
+    "docz": "^v2.0.0-rc.71",
+    "@emotion/core": "^10.0.14",
+    "@emotion/styled": "^10.0.14",
+    "gatsby": "^2.17.8",
+    "gatsby-theme-docz": "^2.0.0-rc.71",
     "scheduler": "^0.17.0",
     "styled-components": "*"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "*"
+  },
+  "dependencies": {
+    "react-use": "^13.2.1"
   },
   "scripts": {
     "dev": "docz dev",

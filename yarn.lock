@@ -2803,9 +2803,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30001004, caniuse-lite@^1.0.30001006:
-  version "1.0.30001009"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001009.tgz#69b77997b882a7aee6af24c8d7d2fa27ee41f348"
-  integrity sha512-M3rEqHN6SaVjgo4bIik7HsGcWXsi+lI9WA0p51RPMFx5gXfduyOXWJrc0R4xBkSK1pgNf4CNgy5M+6H+WiEP8g==
+  version "1.0.30001010"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001010.tgz#397a14034d384260453cc81994f494626d34b938"
+  integrity sha512-RA5GH9YjFNea4ZQszdWgh2SC+dpLiRAg4VDQS2b5JRI45OxmbGrYocYHTa9x0bKMQUE7uvHkNPNffUr+pCxSGw==
 
 capitalize@^2.0.0:
   version "2.0.0"
@@ -4185,10 +4185,10 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-docz-core@2.0.0-rc.73:
-  version "2.0.0-rc.73"
-  resolved "https://registry.yarnpkg.com/docz-core/-/docz-core-2.0.0-rc.73.tgz#cab0b40a4eb5609a0a2268060c6d6bcd609e7d8f"
-  integrity sha512-Dd5cSgCRyR/anP57WCBqvh2SkPJ1h3LBVUYOD56dtlvODURGc5l/2oyY5KMuZzspV0XnUMArQmKdqY28UZERaA==
+docz-core@2.0.0-rc.74:
+  version "2.0.0-rc.74"
+  resolved "https://registry.yarnpkg.com/docz-core/-/docz-core-2.0.0-rc.74.tgz#aabe5db81066f6abf76d0f729c4bb7ebf856e033"
+  integrity sha512-2PA0pw48/oaIyZcVThU7vOSbR/xCRuepNSvdYzCqJ7y7e9j4NjvMcXp13V6nlxbxSO7neyY9kW5AUs8UF3ocAA==
   dependencies:
     "@sindresorhus/slugify" "^0.9.1"
     chalk "^2.4.2"
@@ -4249,21 +4249,21 @@ docz-utils@2.0.0-rc.69:
     unist-util-is "^3.0.0"
     unist-util-visit "^1.4.1"
 
-docz@2.0.0-rc.73, docz@^v2.0.0-rc.71:
-  version "2.0.0-rc.73"
-  resolved "https://registry.yarnpkg.com/docz/-/docz-2.0.0-rc.73.tgz#876b65be497496f14b4d3a38c74bcc334d9b3718"
-  integrity sha512-7FC57C/Z3j9Q+FEDYScXDLb2BNCZ7pNKG8SKWbYQHN1AMqvnIIO2y1+nZJGImi7gEyP0W0mpr/o7kjX+YJ5U+g==
+docz@2.0.0-rc.74, docz@^v2.0.0-rc.71:
+  version "2.0.0-rc.74"
+  resolved "https://registry.yarnpkg.com/docz/-/docz-2.0.0-rc.74.tgz#d911513bd1ad5f8b1356485724aad3362fba9098"
+  integrity sha512-3WTJYibzJegSeOTpcLFdu78a12v02saVzu6naPybCOJvbA2ECnO4W2lSv7vH165LP7yWR/rLS6sWwqZIbIEXvg==
   dependencies:
     "@emotion/core" "^10.0.16"
     "@mdx-js/react" "^1.0.27"
     array-sort "^1.0.0"
     capitalize "^2.0.0"
-    docz-core "2.0.0-rc.73"
+    docz-core "2.0.0-rc.74"
     fast-deep-equal "^2.0.1"
     gatsby "^2.13.27"
     gatsby-plugin-eslint "^2.0.5"
     gatsby-plugin-typescript "^2.1.6"
-    gatsby-theme-docz "2.0.0-rc.73"
+    gatsby-theme-docz "2.0.0-rc.74"
     lodash "^4.17.14"
     marksy "^8.0.0"
     match-sorter "^3.1.1"
@@ -5755,10 +5755,10 @@ gatsby-telemetry@^1.1.36:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby-theme-docz@2.0.0-rc.73, gatsby-theme-docz@^2.0.0-rc.71:
-  version "2.0.0-rc.73"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-docz/-/gatsby-theme-docz-2.0.0-rc.73.tgz#0ffec23755af0216d45b4b51611f97dcc0aab030"
-  integrity sha512-2jCU+lciD43LIgs9uzWLHNIsaQHUKBxjDVmWpE4ucG+EA/fmsNfofiPQ2Af70cr0IdGiu7YqAGf46iovEAXhNg==
+gatsby-theme-docz@2.0.0-rc.74, gatsby-theme-docz@^2.0.0-rc.71:
+  version "2.0.0-rc.74"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-docz/-/gatsby-theme-docz-2.0.0-rc.74.tgz#d5d87f2e5ca15066be795beda53df5609e260453"
+  integrity sha512-SGET6EoDDGNIYN+UaImM5ewAu/qjvx6ZQN+KNK3lamFQwy1SYULuUj2UAprmb3+LptbchHfwFA5g7r5PzrILCQ==
   dependencies:
     "@emotion/core" "^10.0.14"
     "@emotion/styled" "^10.0.14"
@@ -5768,8 +5768,8 @@ gatsby-theme-docz@2.0.0-rc.73, gatsby-theme-docz@^2.0.0-rc.71:
     "@theme-ui/typography" "^0.2.5"
     babel-plugin-export-metadata "2.0.0-rc.69"
     copy-text-to-clipboard "^2.1.0"
-    docz "2.0.0-rc.73"
-    docz-core "2.0.0-rc.73"
+    docz "2.0.0-rc.74"
+    docz-core "2.0.0-rc.74"
     emotion-theming "^10.0.14"
     fs-extra "^8.1.0"
     gatsby "^2.13.27"
@@ -5798,9 +5798,9 @@ gatsby-theme-docz@2.0.0-rc.73, gatsby-theme-docz@^2.0.0-rc.71:
     yargs "^13.3.0"
 
 gatsby@^2.13.27, gatsby@^2.17.8:
-  version "2.17.12"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.17.12.tgz#0ec9e182e58e27882027e74be3f4a6656683726e"
-  integrity sha512-5xXzVRddv2wG2iD8k1xKDfToUbQ3IMhimjvUFPCum58gdH93nwoh3lbXLb8xEGxn/pwlgeSXZgnNZgKYFN6Pzg==
+  version "2.17.13"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.17.13.tgz#c89fb1e6fbcaa76d066174c7f5c8a4e5c7d82552"
+  integrity sha512-INykt+Cy4ERbJDDdEIqFCiBPn9HxVfkiEeBL00eHp7Hlvz6rS4/TZM6nArj3uoH828zvtM41lGfTK3ok9BZ1Kg==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.7.2"
@@ -6777,9 +6777,9 @@ import-fresh@^2.0.0:
     resolve-from "^3.0.0"
 
 import-fresh@^3.0.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.2.0.tgz#fed4d772a13949de7d9894b647e77297db14dedf"
-  integrity sha512-w1waegcRoBrRQ6kfX2+KWc3lIaVUvHiib7F1ZpggbL5+GyZZrpbOnOVNNuylJonNHO6aCJubjfDUzH6J8HmwSA==
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.2.1.tgz#633ff618506e793af5ac91bf48b72677e15cbe66"
+  integrity sha512-6e1q1cnWP2RXD9/keSkxHScg508CdXqXWgWBaETNhyuBFz+kUZlKboh+ISK+bU++DmbHimVBrOz/zzPe0sZ3sQ==
   dependencies:
     parent-module "^1.0.0"
     resolve-from "^4.0.0"
