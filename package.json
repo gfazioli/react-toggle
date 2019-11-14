@@ -1,6 +1,6 @@
 {
   "name": "react-toggle-component",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "A React UI Component to display an awesome Toggle Button control",
   "private": false,
   "main": "dist/index.js",
@@ -60,7 +60,6 @@
     "styled-components": "*"
   },
   "scripts": {
-    "prepare": "tsc -p tsconfig.json",
     "dev": "docz dev",
     "build": "docz build",
     "production": "tsc --project tsconfig.json && git add dist && ./node_modules/tslint/bin/tslint './src/**/*.ts{,x}'"
