@@ -1,6 +1,6 @@
 {
   "name": "react-toggle-component",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "description": "A React UI Component to display an awesome Toggle Button control",
   "private": false,
   "main": "dist/index.js",
@@ -13,9 +13,6 @@
     "typescript",
     "hooks"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "homepage": "http://gfazioli.github.io/react-toggle/",
   "repository": {
     "type": "git",
