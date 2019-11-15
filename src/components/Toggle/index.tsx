@@ -336,4 +336,5 @@ const Toggle: FunctionComponent<Props> = (props, ref) => {
   );
 };
 
+export { Toggle as ToggleProps };
 export default forwardRef(Toggle);

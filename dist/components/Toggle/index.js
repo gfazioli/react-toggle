@@ -108,6 +108,7 @@ var Toggle = function (props, ref) {
         react_1.default.createElement("input", __assign({ ref: ref, onChange: onChangeHandler, type: "checkbox", id: name, name: name, value: value, disabled: disabled }, checkedProp(controlled))),
         react_1.default.createElement(ToggleContainer, { htmlFor: name })));
 };
+exports.ToggleProps = Toggle;
 exports.default = react_1.forwardRef(Toggle);
 var templateObject_1, templateObject_2;
 //# sourceMappingURL=index.js.map
