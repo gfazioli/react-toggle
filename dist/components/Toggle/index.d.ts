@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 interface Props {
     /**
      * Addition CSS classes
@@ -126,5 +126,7 @@ interface Props {
      */
     rightKnobColor?: string;
 }
+declare const Toggle: FunctionComponent<Props>;
+export { Toggle as ToggleProps };
 declare const _default: React.ForwardRefExoticComponent<Props & React.RefAttributes<unknown>>;
 export default _default;
