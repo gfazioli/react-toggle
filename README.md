@@ -13,9 +13,9 @@ This component is designed to render an awesome switch/toggle component.
 
 ## New in v2.0.x
 
-* Use Typescript
+* Use TypeScript
 * Use React Hooks
-* New [Documentation and Intercative Playground](https://gfazioli.github.io/react-toggle/)
+* New [Documentation and Interactive Playground](https://gfazioli.github.io/react-toggle/)
 * Removed the import styles
 * New props
 
@@ -55,12 +55,12 @@ function Application() {
 
 ## Documentation
 
-See the complete [documentation and intercative playground](https://gfazioli.github.io/react-toggle/)
+See the complete [documentation and interactive playground](https://gfazioli.github.io/react-toggle/)
 
 
 ## Contributing
 
-Thanks for any your contribute 👏.
+Thanks for any of your contributions 👏.
 
 ## Bugs 🐛
 
