@@ -11,6 +11,10 @@ This component is designed to render an awesome switch/toggle component.
 
 [![Edit React Toggle](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/01nxypo6zl?autoresize=1&fontsize=14&hidenavigation=1&view=preview)
 
+<p align="center">
+<a href="https://www.buymeacoffee.com/johnfazioli"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=johnfazioli&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
+</p>
+
 ## New in v2.0.x
 
 * Use TypeScript
