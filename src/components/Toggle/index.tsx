@@ -40,17 +40,17 @@ interface Props {
   /**
    * Trigged when the toggle change
    *
-   * @param {React.ChangeEvent} e
+   * @param {React.ChangeEvent<HTMLInputElement>} e
    */
-  onToggle?: (e: React.ChangeEvent) => void;
+  onToggle?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   /**
    * Trigged when the toggle is on the left.
    */
-  onRight?: (e: React.ChangeEvent) => void;
+  onRight?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   /**
    * Trigged when the toggle is on the right.
    */
-  onLeft?: (e: React.ChangeEvent) => void;
+  onLeft?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 
   // ---------------------------------------------------------------
   // Appearance
@@ -301,13 +301,11 @@ const Toggle: FunctionComponent<Props> = (props, ref) => {
 
   const cls = ["react-toggle", className || ""].join(" ");
 
-  const onChangeHandler = (e: React.ChangeEvent) => {
+  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!!onToggle) {
       onToggle(e);
 
-      const target = e.target as HTMLInputElement;
-
-      if (target && target.checked) {
+      if (e.target && e.target.checked) {
         onRight(e);
       } else {
         onLeft(e);
