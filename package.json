@@ -1,19 +1,10 @@
 {
   "name": "react-toggle-component",
-  "version": "3.0.8",
-  "description": "A React UI Component to display an awesome Toggle Button control",
-  "private": false,
-  "main": "dist/index.js",
-  "keywords": [
-    "toggle",
-    "component",
-    "react",
-    "react-component",
-    "docz",
-    "typescript",
-    "hooks"
-  ],
-  "homepage": "http://gfazioli.github.io/react-toggle/",
+  "version": "4.0.0",
+  "description": "Accessible, themeable React toggle/switch component — zero runtime dependencies, ARIA-compliant, CSS variables theming.",
+  "license": "MIT",
+  "author": "Giovambattista Fazioli",
+  "homepage": "https://gfazioli.github.io/react-toggle/",
   "repository": {
     "type": "git",
     "url": "https://github.com/gfazioli/react-toggle"
@@ -21,46 +12,86 @@
   "bugs": {
     "url": "https://github.com/gfazioli/react-toggle/issues"
   },
-  "author": "Giovambattista Fazioli",
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@types/node": "12.12.7",
-    "@types/react": "^16.8.23",
-    "@types/react-dom": "^16.8.4",
-    "@types/styled-components": "^4.1.19",
-    "@types/webpack": "4.39.8",
-    "babel-loader": "^8.0.4",
-    "prettier": "1.19.1",
-    "ts-loader": "^6.2.1",
-    "ts-node": "^8.0.3",
-    "tslint": "^6.0.0-beta0",
-    "tslint-config-prettier": "^1.18.0",
-    "typescript": "3.7.2",
-    "typescript-styled-plugin": "^0.15.0",
-    "webpack": "^4.29.5",
-    "webpack-cli": "^3.3.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "docz": "^v2.0.0-rc.75",
-    "@emotion/core": "^10.0.14",
-    "@emotion/styled": "^10.0.14",
-    "gatsby": "^2.17.8",
-    "gatsby-theme-docz": "^2.0.0-rc.75",
-    "scheduler": "^0.17.0",
-    "styled-components": "^4.2.0"
+  "keywords": [
+    "react",
+    "react-component",
+    "toggle",
+    "switch",
+    "checkbox",
+    "accessible",
+    "aria",
+    "css-modules",
+    "typescript",
+    "headless-friendly"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./dist/index.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "ladle": "ladle serve",
+    "ladle:build": "ladle build --base /react-toggle/ --outDir ladle-dist",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "pnpm typecheck && pnpm lint && pnpm test && pnpm build",
+    "release": "changeset publish",
+    "changeset": "changeset"
   },
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "styled-components": "^4.2.0"
+    "react": ">=18",
+    "react-dom": ">=18"
   },
-  "dependencies": {
-    "react-use": "^13.2.1"
-  },
-  "scripts": {
-    "dev": "docz dev",
-    "build": "docz build",
-    "production": "tsc --project tsconfig.json && git add dist && ./node_modules/tslint/bin/tslint './src/**/*.ts{,x}'"
+  "devDependencies": {
+    "@changesets/cli": "^2.27.11",
+    "@eslint/js": "^9.17.0",
+    "@ladle/react": "^4.1.2",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.18.2",
+    "@typescript-eslint/parser": "^8.18.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.17.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0",
+    "jsdom": "^25.0.1",
+    "prettier": "^3.4.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.2",
+    "vitest": "^2.1.8"
   }
 }

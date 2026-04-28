@@ -1,0 +1,111 @@
+.root {
+  --rt-width: 48px;
+  --rt-height: 24px;
+  --rt-border-width: 2px;
+  --rt-radius: 256px;
+  --rt-radius-bg: 256px;
+  --rt-knob-radius: 100%;
+  --rt-knob-width: 16px;
+  --rt-knob-height: 16px;
+  --rt-knob-gap: 4px;
+
+  --_off-border: var(--rt-border-color, var(--rt-border-color-off, #aaa));
+  --_on-border: var(--rt-border-color, var(--rt-border-color-on, #3887b7));
+  --_off-bg: var(--rt-background-color, var(--rt-background-color-off, #fff));
+  --_on-bg: var(--rt-background-color, var(--rt-background-color-on, #fff));
+  --_disabled-bg: var(--rt-background-color-disabled, #eee);
+  --_off-knob: var(--rt-knob-color, var(--rt-knob-color-off, #aaa));
+  --_on-knob: var(--rt-knob-color, var(--rt-knob-color-on, #3887b7));
+
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: var(--rt-width);
+  height: var(--rt-height);
+  vertical-align: middle;
+  margin: 0 4px;
+}
+
+.input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.input:disabled {
+  cursor: default;
+}
+
+.track {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+  background-color: var(--_off-border);
+  border-radius: var(--rt-radius);
+  transition: background-color 0.3s ease-out;
+  pointer-events: none;
+}
+
+.track::before {
+  content: "";
+  position: absolute;
+  inset: var(--rt-border-width);
+  border-radius: var(--rt-radius-bg);
+  background-color: var(--_off-bg);
+  transition: background-color 0.3s ease-out;
+}
+
+.knob {
+  position: absolute;
+  top: 50%;
+  left: var(--rt-knob-gap);
+  width: var(--rt-knob-width);
+  height: var(--rt-knob-height);
+  border-radius: var(--rt-knob-radius);
+  background-color: var(--_off-knob);
+  transform: translateY(-50%);
+  transition:
+    left 0.2s ease-out,
+    background-color 0.3s ease-out;
+}
+
+.input:checked ~ .track {
+  background-color: var(--_on-border);
+}
+
+.input:checked ~ .track::before {
+  background-color: var(--_on-bg);
+}
+
+.input:checked ~ .track .knob {
+  left: calc(100% - var(--rt-knob-width) - var(--rt-knob-gap));
+  background-color: var(--_on-knob);
+}
+
+.input:disabled ~ .track {
+  background-color: var(--_disabled-bg);
+}
+
+.input:disabled ~ .track .knob {
+  background-color: var(--_disabled-bg);
+}
+
+.input:focus-visible ~ .track {
+  outline: 2px solid Highlight;
+  outline: 2px solid -webkit-focus-ring-color;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track,
+  .track::before,
+  .knob {
+    transition: none;
+  }
+}
