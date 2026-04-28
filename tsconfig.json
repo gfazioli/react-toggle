@@ -23,6 +23,6 @@
     "noEmit": true,
     "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
-  "include": ["src", "tests", "stories", "*.config.ts", "*.config.js"],
-  "exclude": ["node_modules", "dist", "ladle-dist"]
+  "include": ["src", "tests", "site", "*.config.ts", "*.config.js"],
+  "exclude": ["node_modules", "dist", "site-dist"]
 }

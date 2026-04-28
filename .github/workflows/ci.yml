@@ -40,5 +40,5 @@ jobs:
       - name: Build library
         run: pnpm build
 
-      - name: Build Ladle
-        run: pnpm ladle:build
+      - name: Build site
+        run: pnpm site:build

@@ -29,13 +29,13 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      - run: pnpm ladle:build
+      - run: pnpm site:build
 
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ladle-dist
+          path: site-dist
 
   deploy:
     needs: build

@@ -1,0 +1,111 @@
+.hero {
+  position: relative;
+  padding: var(--space-3xl) 0 var(--space-2xl);
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  inset: -50% 0 auto 0;
+  height: 600px;
+  background: var(--gradient-glow);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  box-shadow: 0 0 12px var(--color-accent);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.hero h1 {
+  margin: var(--space-lg) 0 var(--space-md);
+}
+
+.hero-sub {
+  max-width: 60ch;
+  margin: 0 auto;
+  font-size: clamp(16px, 1.4vw, 19px);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.hero-sub code {
+  background: var(--color-bg-muted);
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-size: 0.85em;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.hero-cta-cmd {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.hero-cta-prompt {
+  color: var(--color-text-subtle);
+  user-select: none;
+}
+
+.hero-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2xl);
+  margin-top: var(--space-3xl);
+  padding: var(--space-xl) var(--space-lg);
+  border-radius: var(--radius-2xl);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-showcase-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.hero-showcase-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-subtle);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .hero-showcase {
+    gap: var(--space-xl);
+    padding: var(--space-lg);
+  }
+}
