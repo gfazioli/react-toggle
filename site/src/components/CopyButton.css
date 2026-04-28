@@ -1,0 +1,40 @@
+.copy-btn {
+  position: relative;
+}
+
+.copy-btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  opacity: 0.65;
+  transition: opacity 200ms ease, color 200ms ease;
+}
+
+.copy-btn:hover .copy-btn-icon {
+  opacity: 1;
+}
+
+.copy-btn .copy-btn-icon svg polyline {
+  color: #10b981;
+}
+
+.copy-btn-ghost {
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: var(--radius-sm);
+}
+
+.copy-btn.copy-btn-icon-only {
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.copy-btn.copy-btn-icon-only .copy-btn-icon {
+  width: 16px;
+  height: 16px;
+}
