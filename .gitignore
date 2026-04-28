@@ -84,7 +84,7 @@ storybook-static
 
 # Build output
 dist/
-ladle-dist/
+site-dist/
 
 # Test coverage
 coverage/

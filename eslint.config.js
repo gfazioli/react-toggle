@@ -7,7 +7,7 @@ import globals from "globals";
 
 export default tseslint.config(
   {
-    ignores: ["dist/", "ladle-dist/", "coverage/", "node_modules/"],
+    ignores: ["dist/**", "site-dist/**", "coverage/**", "node_modules/**"],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
@@ -39,6 +39,7 @@ export default tseslint.config(
       ...jsxA11y.configs.recommended.rules,
       "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }],
       "react/prop-types": "off",
+      "react/no-unescaped-entities": "off",
       "jsx-a11y/label-has-associated-control": [
         "error",
         { controlComponents: ["Toggle"], depth: 3 },

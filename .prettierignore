@@ -1,5 +1,5 @@
 dist/
-ladle-dist/
+site-dist/
 coverage/
 node_modules/
 pnpm-lock.yaml

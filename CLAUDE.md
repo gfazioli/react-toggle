@@ -12,7 +12,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Build**: `tsup` → dual ESM + CJS + `.d.ts`, plus a single `index.css` from CSS Modules
 - **Lint/format**: ESLint 9 flat config (typescript-eslint, react, react-hooks, jsx-a11y) + Prettier 3
 - **Tests**: vitest + jsdom + @testing-library/react + @testing-library/user-event
-- **Docs/playground**: Ladle (Vite-based)
+- **Docs site**: custom Vite + React landing page in `site/` (no Storybook/Ladle — see *Layout* below)
 - **Package manager**: pnpm 9
 - **Release**: Changesets (CI workflow opens "Version Packages" PR; merging it publishes to npm)
 
@@ -25,8 +25,9 @@ pnpm typecheck    # tsc --noEmit
 pnpm lint         # eslint .
 pnpm test         # vitest run (one-off)
 pnpm test:watch   # vitest (watch)
-pnpm ladle        # ladle serve — interactive playground
-pnpm ladle:build  # ladle build → ladle-dist/ (deployed to GH Pages by CI)
+pnpm site:dev     # vite dev — landing site at localhost:5173/react-toggle/
+pnpm site:build   # vite build → site-dist/ (deployed to GH Pages by CI)
+pnpm site:preview # serve a built site-dist/ locally
 pnpm changeset    # add a changeset (run before each PR that changes published behavior)
 ```
 
@@ -74,11 +75,10 @@ CSS Modules are extracted by tsup/esbuild into `dist/index.css` and exposed via 
 
 - `src/` — library source (`Toggle.tsx`, `Toggle.module.css`, `index.ts`)
 - `tests/` — vitest specs
-- `stories/` — Ladle `*.stories.tsx` (Intro / Basic / Sizes / Colors / Knob & Border / Theming / Form / A11y)
-- `.ladle/config.mjs` — Ladle config (story glob, default story)
+- `site/` — custom landing page (Vite + React + plain CSS, dark mode by `prefers-color-scheme`). Imports `Toggle` from the package itself via Vite alias `react-toggle-component → ../src/index.ts`. Sections: Hero, Features, **live theme Builder** with URL-persisted config (`?t=base64`), Preset gallery, Examples, Install, Footer. Floating capsule nav with IntersectionObserver-driven active link.
 - `.changeset/` — pending release notes
-- `.github/workflows/` — `ci.yml` (typecheck/lint/test/build), `deploy-docs.yml` (Ladle → GH Pages on push to main), `release.yml` (Changesets publish)
-- `dist/`, `ladle-dist/`, `coverage/` — build/test outputs, **gitignored**
+- `.github/workflows/` — `ci.yml` (typecheck/lint/test/build/site-build), `deploy-docs.yml` (site → GH Pages on push to main), `release.yml` (Changesets publish)
+- `dist/`, `site-dist/`, `coverage/` — build/test outputs, **gitignored**
 
 ## Conventions
 

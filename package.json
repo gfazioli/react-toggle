@@ -51,8 +51,9 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "ladle": "ladle serve",
-    "ladle:build": "ladle build --base /react-toggle/ --outDir ladle-dist",
+    "site:dev": "vite --config site/vite.config.ts",
+    "site:build": "pnpm build && vite build --config site/vite.config.ts",
+    "site:preview": "vite preview --config site/vite.config.ts",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "format": "prettier --write .",
@@ -70,7 +71,6 @@
   "devDependencies": {
     "@changesets/cli": "^2.27.11",
     "@eslint/js": "^9.17.0",
-    "@ladle/react": "^4.1.2",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^14.5.2",
@@ -92,6 +92,7 @@
     "tsup": "^8.3.5",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.2",
+    "vite": "^5.4.11",
     "vitest": "^2.1.8"
   }
 }
