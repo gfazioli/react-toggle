@@ -21,7 +21,11 @@
     "declarationMap": true,
     "sourceMap": true,
     "noEmit": true,
-    "types": ["vitest/globals", "@testing-library/jest-dom"]
+    "types": ["vitest/globals", "@testing-library/jest-dom"],
+    "baseUrl": ".",
+    "paths": {
+      "react-toggle-component": ["./src/index.ts"]
+    }
   },
   "include": ["src", "tests", "site", "*.config.ts", "*.config.js"],
   "exclude": ["node_modules", "dist", "site-dist"]
