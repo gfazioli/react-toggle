@@ -13,7 +13,7 @@
 [![license](https://img.shields.io/npm/l/react-toggle-component?style=flat-square&color=6366f1)](./LICENSE)
 
 [**Live playground →**](https://gfazioli.github.io/react-toggle/) ・
-[**v3 → v4 guide**](./UPGRADE.md) ・
+[**v3 → v4 guide →**](https://gfazioli.github.io/react-toggle/upgrade/) ・
 [**Changelog**](./CHANGELOG.md)
 
 </div>
@@ -155,7 +155,7 @@ Plus all the visual props listed in the table above.
 
 ## Migrating from v3
 
-`controlled`, `ReactToggleThemeProvider`, `onLeft`, `onRight`, and `onToggle` are deprecated/removed in v4. See [UPGRADE.md](./UPGRADE.md) for a full migration guide.
+`controlled`, `ReactToggleThemeProvider`, `onLeft`, `onRight`, and `onToggle` are deprecated/removed in v4. See the [v3 → v4 guide](https://gfazioli.github.io/react-toggle/upgrade/) for a full migration walkthrough.
 
 ## License
 
