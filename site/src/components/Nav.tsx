@@ -7,6 +7,7 @@ const SECTIONS = [
   { id: "builder", label: "Builder" },
   { id: "presets", label: "Presets" },
   { id: "install", label: "Install" },
+  { id: "upgrade", label: "Migrate" },
 ];
 
 export function Nav() {

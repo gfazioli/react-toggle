@@ -4,6 +4,7 @@ import { Builder } from "./components/Builder";
 import { Presets } from "./components/Presets";
 import { Examples } from "./components/Examples";
 import { Install } from "./components/Install";
+import { Upgrade } from "./components/Upgrade";
 import { Footer } from "./components/Footer";
 import { Nav } from "./components/Nav";
 import { ThemeConfigProvider } from "./hooks/useThemeConfig";
@@ -19,6 +20,7 @@ export function App() {
         <Presets />
         <Examples />
         <Install />
+        <Upgrade />
       </main>
       <Footer />
     </ThemeConfigProvider>
