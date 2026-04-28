@@ -81,3 +81,18 @@ typings/
 
 storybook-static
 .docz
+
+# Build output
+dist/
+ladle-dist/
+
+# Test coverage
+coverage/
+
+# pnpm
+.pnpm-store/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
