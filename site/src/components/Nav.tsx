@@ -7,13 +7,22 @@ const SECTIONS = [
   { id: "builder", label: "Builder" },
   { id: "presets", label: "Presets" },
   { id: "install", label: "Install" },
-  { id: "upgrade", label: "Migrate" },
 ];
+
+const BASE = import.meta.env.BASE_URL;
+const UPGRADE_URL = `${BASE}upgrade/`;
+const HOME_URL = BASE;
+
+function getIsUpgradePage(): boolean {
+  if (typeof window === "undefined") return false;
+  return window.location.pathname.replace(/\/$/, "") === UPGRADE_URL.replace(/\/$/, "");
+}
 
 export function Nav() {
   const [active, setActive] = useState<string>("");
   const [scrolled, setScrolled] = useState(false);
   const [brandOn, setBrandOn] = useState(true);
+  const isUpgradePage = getIsUpgradePage();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -29,6 +38,10 @@ export function Nav() {
   }, []);
 
   useEffect(() => {
+    if (isUpgradePage) {
+      setActive("upgrade");
+      return;
+    }
     const targets = SECTIONS.map((s) => document.getElementById(s.id)).filter(
       (el): el is HTMLElement => el !== null,
     );
@@ -45,14 +58,16 @@ export function Nav() {
     );
     targets.forEach((t) => obs.observe(t));
     return () => obs.disconnect();
-  }, []);
+  }, [isUpgradePage]);
+
+  const sectionHref = (id: string) => (isUpgradePage ? `${HOME_URL}#${id}` : `#${id}`);
 
   return (
     <header className={`nav ${scrolled ? "nav-scrolled" : ""}`}>
       <div className="nav-glow" aria-hidden="true" />
       <div className="container">
         <div className="nav-inner">
-          <a href="#top" className="nav-brand" aria-label="react-toggle-component home">
+          <a href={HOME_URL} className="nav-brand" aria-label="react-toggle-component home">
             <span className="nav-brand-mark" aria-hidden="true">
               <Toggle
                 name="nav-brand"
@@ -74,13 +89,20 @@ export function Nav() {
             {SECTIONS.map((s) => (
               <a
                 key={s.id}
-                href={`#${s.id}`}
+                href={sectionHref(s.id)}
                 className={active === s.id ? "active" : ""}
                 aria-current={active === s.id ? "true" : undefined}
               >
                 {s.label}
               </a>
             ))}
+            <a
+              href={UPGRADE_URL}
+              className={active === "upgrade" ? "active" : ""}
+              aria-current={active === "upgrade" ? "page" : undefined}
+            >
+              Migrate
+            </a>
             <span className="nav-divider" aria-hidden="true" />
             <a
               href="https://www.npmjs.com/package/react-toggle-component"

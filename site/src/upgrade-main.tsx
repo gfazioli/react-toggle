@@ -1,10 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { Landing } from "./pages/Landing";
+import { UpgradePage } from "./pages/UpgradePage";
 import "./styles/global.css";
 
 createRoot(document.getElementById("app")!).render(
   <StrictMode>
-    <Landing />
+    <UpgradePage />
   </StrictMode>,
 );

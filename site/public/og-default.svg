@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0a0a0b"/>
+      <stop offset="1" stop-color="#18181b"/>
+    </linearGradient>
+    <linearGradient id="track" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="0.55" stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="text" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#a5b4fc"/>
+      <stop offset="0.5" stop-color="#d8b4fe"/>
+      <stop offset="1" stop-color="#f9a8d4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="50%">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glowFilter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <ellipse cx="600" cy="240" rx="500" ry="280" fill="url(#glow)"/>
+
+  <g transform="translate(600 240)">
+    <rect x="-180" y="-72" width="360" height="144" rx="72" fill="url(#track)" filter="url(#glowFilter)" opacity="0.6"/>
+    <rect x="-180" y="-72" width="360" height="144" rx="72" fill="url(#track)"/>
+    <circle cx="100" cy="0" r="50" fill="white"/>
+  </g>
+
+  <text
+    x="600"
+    y="430"
+    text-anchor="middle"
+    font-family="Inter, -apple-system, sans-serif"
+    font-size="68"
+    font-weight="800"
+    fill="white"
+    letter-spacing="-2"
+  >react-toggle-component</text>
+
+  <text
+    x="600"
+    y="492"
+    text-anchor="middle"
+    font-family="Inter, -apple-system, sans-serif"
+    font-size="28"
+    font-weight="500"
+    fill="#a1a1aa"
+    letter-spacing="-0.5"
+  >Accessible · Themeable via CSS variables · Zero deps</text>
+
+  <text
+    x="600"
+    y="560"
+    text-anchor="middle"
+    font-family="JetBrains Mono, ui-monospace, monospace"
+    font-size="22"
+    font-weight="600"
+    fill="url(#text)"
+    letter-spacing="2"
+  >v4 · React 18+</text>
+</svg>

@@ -1,0 +1,48 @@
+.upgrade-page-hero {
+  position: relative;
+  padding: var(--space-3xl) 0 var(--space-xl);
+  overflow: hidden;
+  text-align: center;
+}
+
+.upgrade-page-hero::before {
+  content: "";
+  position: absolute;
+  inset: -40% 0 50% 0;
+  background: var(--gradient-glow);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.upgrade-page-hero h1 {
+  margin: var(--space-md) auto 0;
+  max-width: 14ch;
+  font-size: clamp(36px, 5vw, 64px);
+  letter-spacing: -0.035em;
+  font-weight: 800;
+}
+
+.upgrade-page-hero p {
+  margin: var(--space-lg) auto 0;
+  max-width: 60ch;
+  font-size: clamp(15px, 1.3vw, 18px);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.upgrade-page-hero .eyebrow {
+  background: var(--color-bg-elevated);
+}
+
+.upgrade-page-hero .eyebrow a {
+  color: inherit;
+}
+
+.eyebrow-arrow {
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.upgrade-page .upgrade {
+  padding-top: var(--space-2xl);
+}

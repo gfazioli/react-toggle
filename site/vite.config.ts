@@ -15,5 +15,11 @@ export default defineConfig({
     outDir: fileURLToPath(new URL("../site-dist", import.meta.url)),
     emptyOutDir: true,
     sourcemap: true,
+    rollupOptions: {
+      input: {
+        main: fileURLToPath(new URL("./index.html", import.meta.url)),
+        upgrade: fileURLToPath(new URL("./upgrade/index.html", import.meta.url)),
+      },
+    },
   },
 });
