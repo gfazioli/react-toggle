@@ -1,19 +1,32 @@
+<div align="center">
+
+<img src="./assets/logo.svg" alt="" width="180" />
+
 # react-toggle-component
 
-[![npm version](https://img.shields.io/npm/v/react-toggle-component.svg)](https://www.npmjs.com/package/react-toggle-component)
-[![license](https://img.shields.io/npm/l/react-toggle-component.svg)](./LICENSE)
-[![types](https://img.shields.io/npm/types/react-toggle-component.svg)](https://www.npmjs.com/package/react-toggle-component)
-[![downloads](https://img.shields.io/npm/dm/react-toggle-component.svg)](https://www.npmjs.com/package/react-toggle-component)
+**The accessible, themeable React switch you actually want to ship.**
 
-Accessible, themeable React toggle/switch component.
+[![npm version](https://img.shields.io/npm/v/react-toggle-component?style=flat-square&color=6366f1)](https://www.npmjs.com/package/react-toggle-component)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/react-toggle-component?style=flat-square&label=gzip&color=6366f1)](https://bundlephobia.com/package/react-toggle-component)
+[![types](https://img.shields.io/npm/types/react-toggle-component?style=flat-square&color=6366f1)](https://www.npmjs.com/package/react-toggle-component)
+[![downloads](https://img.shields.io/npm/dm/react-toggle-component?style=flat-square&color=6366f1)](https://www.npmjs.com/package/react-toggle-component)
+[![license](https://img.shields.io/npm/l/react-toggle-component?style=flat-square&color=6366f1)](./LICENSE)
+
+[**Live playground →**](https://gfazioli.github.io/react-toggle/) ・
+[**v3 → v4 guide**](./UPGRADE.md) ・
+[**Changelog**](./CHANGELOG.md)
+
+</div>
+
+<br/>
+
+> `<input type="checkbox" role="switch">` under the hood. Theme it with one CSS selector. Zero runtime dependencies. ~3 KB gzipped.
 
 - 🎯 **Accessible** — `role="switch"`, ARIA-compliant, full keyboard support, `prefers-reduced-motion` aware.
 - 🎨 **Themeable via CSS variables** — no runtime theming layer, scope themes with any CSS selector.
 - 📦 **Zero runtime dependencies** — only React as a peer dependency.
 - 🪶 **Tiny** — ~3 KB ESM (gzipped), tree-shakeable, dual ESM + CJS.
 - ⌨️ **TypeScript-first** — full type declarations included.
-
-[**→ Live playground**](https://gfazioli.github.io/react-toggle/)
 
 ## Install
 
@@ -148,8 +161,12 @@ Plus all the visual props listed in the table above.
 
 MIT — © Giovambattista Fazioli
 
+## Sponsor
+
+If this project saves you time, consider [sponsoring on GitHub](https://github.com/sponsors/gfazioli) — it directly supports continued maintenance and new releases.
+
 <p align="center">
-  <a href="https://www.buymeacoffee.com/johnfazioli">
-    <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=johnfazioli&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" alt="Buy me a coffee" />
+  <a href="https://github.com/sponsors/gfazioli">
+    <img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="Sponsor on GitHub" />
   </a>
 </p>

@@ -16,12 +16,9 @@ export function Footer() {
           <a href="https://github.com/gfazioli/react-toggle" target="_blank" rel="noreferrer noopener">
             GitHub
           </a>
-          <a
-            href="https://github.com/gfazioli/react-toggle/blob/main/UPGRADE.md"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            v3 → v4 guide
+          <a href="#upgrade">v3 → v4 guide</a>
+          <a href="https://github.com/sponsors/gfazioli" target="_blank" rel="noreferrer noopener">
+            Sponsor
           </a>
           <a
             href="https://github.com/gfazioli/react-toggle/blob/main/LICENSE"
