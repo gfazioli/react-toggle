@@ -48,11 +48,11 @@ Standard React convention: passing `checked` makes it controlled; otherwise it f
 
 ### Theming pipeline
 
-Every visual prop (e.g. `borderColor`, `leftKnobColor`, `width`) maps to a CSS custom property via `VAR_MAP` in `Toggle.tsx`. Provided values are written as inline CSS variables on the root `<span>`. The CSS Module `Toggle.module.css` resolves them with a two-level fallback so a single override (`--rt-border-color`) supersedes the per-state pair (`--rt-border-color-off` / `--rt-border-color-on`):
+Every visual prop (e.g. `borderColor`, `leftKnobColor`, `width`) maps to a CSS custom property via `VAR_MAP` in `Toggle.tsx`. Provided values are written as inline CSS variables on the root `<span>`. `Toggle.module.css` consumes them with the default values inlined inside `var()`, never declared on `.root` directly — declaring them on `.root` would block inheritance from any wrapping ancestor that sets `--rt-*` vars (which would silently break consumer theming via CSS-only). The two-level fallback gives a single override (`--rt-border-color`) precedence over the per-state pair (`--rt-border-color-off` / `--rt-border-color-on`):
 
 ```css
---_off-border: var(--rt-border-color, var(--rt-border-color-off, #aaa));
---_on-border:  var(--rt-border-color, var(--rt-border-color-on,  #3887b7));
+.track             { background-color: var(--rt-border-color, var(--rt-border-color-off, #aaa)); }
+.input:checked ~ .track { background-color: var(--rt-border-color, var(--rt-border-color-on,  #3887b7)); }
 ```
 
 This is why **there is no theme provider**: any CSS scope can theme a subtree by setting these variables. When adding a new visual knob:

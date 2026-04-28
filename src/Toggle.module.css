@@ -1,27 +1,9 @@
 .root {
-  --rt-width: 48px;
-  --rt-height: 24px;
-  --rt-border-width: 2px;
-  --rt-radius: 256px;
-  --rt-radius-bg: 256px;
-  --rt-knob-radius: 100%;
-  --rt-knob-width: 16px;
-  --rt-knob-height: 16px;
-  --rt-knob-gap: 4px;
-
-  --_off-border: var(--rt-border-color, var(--rt-border-color-off, #aaa));
-  --_on-border: var(--rt-border-color, var(--rt-border-color-on, #3887b7));
-  --_off-bg: var(--rt-background-color, var(--rt-background-color-off, #fff));
-  --_on-bg: var(--rt-background-color, var(--rt-background-color-on, #fff));
-  --_disabled-bg: var(--rt-background-color-disabled, #eee);
-  --_off-knob: var(--rt-knob-color, var(--rt-knob-color-off, #aaa));
-  --_on-knob: var(--rt-knob-color, var(--rt-knob-color-on, #3887b7));
-
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  width: var(--rt-width);
-  height: var(--rt-height);
+  width: var(--rt-width, 48px);
+  height: var(--rt-height, 24px);
   vertical-align: middle;
   margin: 0 4px;
 }
@@ -46,8 +28,8 @@
   position: absolute;
   inset: 0;
   box-sizing: border-box;
-  background-color: var(--_off-border);
-  border-radius: var(--rt-radius);
+  background-color: var(--rt-border-color, var(--rt-border-color-off, #aaa));
+  border-radius: var(--rt-radius, 256px);
   transition: background-color 0.3s ease-out;
   pointer-events: none;
 }
@@ -55,20 +37,20 @@
 .track::before {
   content: "";
   position: absolute;
-  inset: var(--rt-border-width);
-  border-radius: var(--rt-radius-bg);
-  background-color: var(--_off-bg);
+  inset: var(--rt-border-width, 2px);
+  border-radius: var(--rt-radius-bg, 256px);
+  background-color: var(--rt-background-color, var(--rt-background-color-off, #fff));
   transition: background-color 0.3s ease-out;
 }
 
 .knob {
   position: absolute;
   top: 50%;
-  left: var(--rt-knob-gap);
-  width: var(--rt-knob-width);
-  height: var(--rt-knob-height);
-  border-radius: var(--rt-knob-radius);
-  background-color: var(--_off-knob);
+  left: var(--rt-knob-gap, 4px);
+  width: var(--rt-knob-width, 16px);
+  height: var(--rt-knob-height, 16px);
+  border-radius: var(--rt-knob-radius, 100%);
+  background-color: var(--rt-knob-color, var(--rt-knob-color-off, #aaa));
   transform: translateY(-50%);
   transition:
     left 0.2s ease-out,
@@ -76,24 +58,24 @@
 }
 
 .input:checked ~ .track {
-  background-color: var(--_on-border);
+  background-color: var(--rt-border-color, var(--rt-border-color-on, #3887b7));
 }
 
 .input:checked ~ .track::before {
-  background-color: var(--_on-bg);
+  background-color: var(--rt-background-color, var(--rt-background-color-on, #fff));
 }
 
 .input:checked ~ .track .knob {
-  left: calc(100% - var(--rt-knob-width) - var(--rt-knob-gap));
-  background-color: var(--_on-knob);
+  left: calc(100% - var(--rt-knob-width, 16px) - var(--rt-knob-gap, 4px));
+  background-color: var(--rt-knob-color, var(--rt-knob-color-on, #3887b7));
 }
 
 .input:disabled ~ .track {
-  background-color: var(--_disabled-bg);
+  background-color: var(--rt-background-color-disabled, #eee);
 }
 
 .input:disabled ~ .track .knob {
-  background-color: var(--_disabled-bg);
+  background-color: var(--rt-background-color-disabled, #eee);
 }
 
 .input:focus-visible ~ .track {
