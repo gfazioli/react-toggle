@@ -6,7 +6,7 @@ This project follows [Semantic Versioning](https://semver.org/). From v4 onwards
 
 ## 4.0.0
 
-Full rewrite. See [UPGRADE.md](./UPGRADE.md) for migration steps from v3.
+Full rewrite. See the [v3 → v4 guide](https://gfazioli.github.io/react-toggle/upgrade/) for migration steps.
 
 ### Breaking
 
