@@ -157,6 +157,13 @@ Plus all the visual props listed in the table above.
 
 `controlled`, `ReactToggleThemeProvider`, `onLeft`, `onRight`, and `onToggle` are deprecated/removed in v4. See the [v3 → v4 guide](https://gfazioli.github.io/react-toggle/upgrade/) for a full migration walkthrough.
 
+## Other Undolog components
+
+Small, accessible React components — same philosophy, same toolchain, zero runtime dependencies:
+
+- **[react-amiga-guru-meditation](https://gfazioli.github.io/react-amiga-guru-meditation/)** — an error boundary that renders the iconic Amiga Guru Meditation screen. ([npm](https://www.npmjs.com/package/react-amiga-guru-meditation) · [GitHub](https://github.com/gfazioli/react-amiga-guru-meditation))
+- **[@gfazioli/react-flip](https://gfazioli.github.io/react-flip/)** — wrap any two faces and animate a 3D rotation between them. ([npm](https://www.npmjs.com/package/@gfazioli/react-flip) · [GitHub](https://github.com/gfazioli/react-flip))
+
 ## License
 
 MIT — © Giovambattista Fazioli
