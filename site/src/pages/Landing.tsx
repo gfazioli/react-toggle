@@ -4,6 +4,7 @@ import { Builder } from "../components/Builder";
 import { Presets } from "../components/Presets";
 import { Examples } from "../components/Examples";
 import { Install } from "../components/Install";
+import { Family } from "../components/Family";
 import { Footer } from "../components/Footer";
 import { Nav } from "../components/Nav";
 import { ThemeConfigProvider } from "../hooks/useThemeConfig";
@@ -19,6 +20,7 @@ export function Landing() {
         <Presets />
         <Examples />
         <Install />
+        <Family />
       </main>
       <Footer />
     </ThemeConfigProvider>
