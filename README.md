@@ -163,6 +163,7 @@ Small, accessible React components — same philosophy, same toolchain, zero run
 
 - **[react-amiga-guru-meditation](https://gfazioli.github.io/react-amiga-guru-meditation/)** — an error boundary that renders the iconic Amiga Guru Meditation screen. ([npm](https://www.npmjs.com/package/react-amiga-guru-meditation) · [GitHub](https://github.com/gfazioli/react-amiga-guru-meditation))
 - **[@gfazioli/react-flip](https://gfazioli.github.io/react-flip/)** — wrap any two faces and animate a 3D rotation between them. ([npm](https://www.npmjs.com/package/@gfazioli/react-flip) · [GitHub](https://github.com/gfazioli/react-flip))
+- **[@gfazioli/react-tilt](https://gfazioli.github.io/react-tilt/)** — interactive 3D tilt cards with parallax, glare, light, shadow, gyroscope, and spring physics. ([npm](https://www.npmjs.com/package/@gfazioli/react-tilt) · [GitHub](https://github.com/gfazioli/react-tilt))
 
 ## License
 

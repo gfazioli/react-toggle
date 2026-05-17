@@ -46,6 +46,28 @@ const OTHERS = [
       </svg>
     ),
   },
+  {
+    name: "@gfazioli/react-tilt",
+    description:
+      "Interactive 3D tilt cards for React — parallax (`<Tilt.Layer depth={n}>`), glare, light, dynamic shadow, gyroscope, spring physics, keyboard. Themeable via CSS variables.",
+    site: "https://gfazioli.github.io/react-tilt/",
+    glyph: (
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+      >
+        <rect x="4" y="6" width="16" height="12" rx="2" transform="rotate(-8 12 12)" />
+        <path d="M8 10h6" transform="rotate(-8 12 12)" />
+      </svg>
+    ),
+  },
 ] as const;
 
 export function Family() {
