@@ -202,9 +202,18 @@
   overflow: hidden;
 }
 
+/* Classic "browser tabs" look:
+ *   - tabs row sits on a subtle bg
+ *   - a 1px line runs along the bottom of the tabs row
+ *   - the active tab carries top + side border, no bottom border, and its
+ *     bg matches the code panel below — so the tab merges with the panel
+ *   - `margin-bottom: -1px` on the active tab overlaps the row's bottom line
+ *     by exactly 1px → no visible gap between tab and panel
+ *   - a small gradient underline marks which tab is active (without a
+ *     visible 4-pixel offset to the code text). */
 .builder-code-tabs {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 4px;
   padding: 8px 8px 0;
   background: var(--color-bg-subtle);
@@ -212,16 +221,16 @@
 }
 
 .builder-code-tabs button[role="tab"] {
+  position: relative;
   padding: 8px 14px;
-  border: none;
   background: transparent;
   color: var(--color-text-muted);
   font-size: 13px;
   font-weight: 500;
-  border-radius: 8px 8px 0 0;
   border: 1px solid transparent;
   border-bottom: none;
   margin-bottom: -1px;
+  border-radius: 8px 8px 0 0;
   font-family: var(--font-mono);
 }
 
@@ -233,6 +242,19 @@
   background: var(--color-bg-elevated);
   color: var(--color-text);
   border-color: var(--color-border);
+}
+
+/* Accent underline on the active tab — flush with the tab's bottom edge, so
+ * there's no extra vertical gap visible between it and the code panel. */
+.builder-code-tabs button[role="tab"].active::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 0;
+  height: 2px;
+  border-radius: 2px 2px 0 0;
+  background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-3) 100%);
 }
 
 .builder-code-spacer {
