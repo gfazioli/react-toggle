@@ -1,7 +1,7 @@
 {
   "name": "react-toggle-component",
   "version": "4.0.0",
-  "description": "Accessible, themeable React toggle/switch component — zero runtime dependencies, ARIA-compliant, CSS variables theming.",
+  "description": "Accessible, themeable React toggle/switch component \u2014 zero runtime dependencies, ARIA-compliant, CSS variables theming.",
   "license": "MIT",
   "author": "Giovambattista Fazioli",
   "homepage": "https://gfazioli.github.io/react-toggle/",
@@ -96,5 +96,10 @@
     "typescript-eslint": "^8.18.2",
     "vite": "^5.4.11",
     "vitest": "^2.1.8"
+  },
+  "pnpm": {
+    "overrides": {
+      "esbuild": "^0.25.0"
+    }
   }
 }
