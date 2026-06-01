@@ -72,6 +72,21 @@ export function Hero() {
           <span className="eyebrow-dot" /> v4 · fully rewritten for React 18+
         </span>
 
+        <div className="hero-badge">
+          <a
+            href="https://www.npmjs.com/package/react-toggle-component"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Monthly downloads on npm"
+          >
+            <img
+              src="https://img.shields.io/npm/dm/react-toggle-component?style=flat-square&color=6366f1"
+              alt="npm downloads per month"
+              height={20}
+            />
+          </a>
+        </div>
+
         <h1>
           The React <span className="gradient-text">switch</span>
           <br />

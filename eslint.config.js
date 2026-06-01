@@ -30,7 +30,9 @@ export default tseslint.config(
       "jsx-a11y": jsxA11y,
     },
     settings: {
-      react: { version: "detect" },
+      // Pin the version: eslint-plugin-react's auto-detect calls the
+      // context.getFilename() API removed in ESLint 10 and crashes.
+      react: { version: "19.2" },
     },
     rules: {
       ...react.configs.recommended.rules,
@@ -40,6 +42,9 @@ export default tseslint.config(
       "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }],
       "react/prop-types": "off",
       "react/no-unescaped-entities": "off",
+      // react-hooks 7 added this rule; the demo site's scroll-spy effects use
+      // setState intentionally — keep it visible as a warning, not an error.
+      "react-hooks/set-state-in-effect": "warn",
       "jsx-a11y/label-has-associated-control": [
         "error",
         { controlComponents: ["Toggle"], depth: 3 },

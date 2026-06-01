@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    // TS 6 flags `baseUrl` (re-injected by tsup's dts build via `paths`) as a
+    // deprecation error; silence it during the 6.x line. Revisit for TS 7.
+    "ignoreDeprecations": "6.0",
     "target": "ES2020",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
@@ -22,7 +25,6 @@
     "sourceMap": true,
     "noEmit": true,
     "types": ["vitest/globals", "@testing-library/jest-dom"],
-    "baseUrl": ".",
     "paths": {
       "react-toggle-component": ["./src/index.ts"]
     }

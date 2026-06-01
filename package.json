@@ -1,7 +1,7 @@
 {
   "name": "react-toggle-component",
   "version": "4.0.0",
-  "description": "Accessible, themeable React toggle/switch component \u2014 zero runtime dependencies, ARIA-compliant, CSS variables theming.",
+  "description": "Accessible, themeable React toggle/switch component — zero runtime dependencies, ARIA-compliant, CSS variables theming.",
   "license": "MIT",
   "author": "Giovambattista Fazioli",
   "homepage": "https://gfazioli.github.io/react-toggle/",
@@ -47,7 +47,7 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "pnpm@9.15.0",
+  "packageManager": "pnpm@11.5.0",
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -69,37 +69,32 @@
     "react-dom": ">=18"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.11",
-    "@eslint/js": "^9.17.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.1.0",
-    "@testing-library/user-event": "^14.5.2",
-    "@types/node": "^22.10.2",
+    "@changesets/cli": "^2.31.0",
+    "@eslint/js": "^10.0.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^25.9.1",
     "@types/prismjs": "^1.26.6",
-    "@types/react": "^19.0.2",
-    "@types/react-dom": "^19.0.2",
-    "@typescript-eslint/eslint-plugin": "^8.18.2",
-    "@typescript-eslint/parser": "^8.18.2",
-    "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.17.0",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "@typescript-eslint/eslint-plugin": "^8.60.0",
+    "@typescript-eslint/parser": "^8.60.0",
+    "@vitejs/plugin-react": "^6.0.2",
+    "eslint": "^10.4.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "globals": "^15.14.0",
-    "jsdom": "^25.0.1",
-    "prettier": "^3.4.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.6.0",
+    "jsdom": "^29.1.1",
+    "prettier": "^3.8.3",
     "prismjs": "^1.30.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2",
-    "typescript-eslint": "^8.18.2",
-    "vite": "^5.4.11",
-    "vitest": "^2.1.8"
-  },
-  "pnpm": {
-    "overrides": {
-      "esbuild": "^0.25.0"
-    }
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.60.0",
+    "vite": "^8.0.14",
+    "vitest": "^4.1.7"
   }
 }

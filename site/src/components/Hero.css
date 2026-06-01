@@ -33,6 +33,16 @@
   50% { opacity: 0.4; }
 }
 
+.hero-badge {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-md);
+}
+
+.hero-badge img {
+  display: block;
+}
+
 .hero h1 {
   margin: var(--space-lg) 0 var(--space-md);
 }

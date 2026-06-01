@@ -39,7 +39,7 @@ export function CodeBlock({ code, lang = "tsx", className }: CodeBlockProps) {
     <pre className={`code-block ${className ?? ""}`.trim()} data-lang={lang}>
       <code
         className={`language-${ALIASES[lang]}`}
-        // eslint-disable-next-line react/no-danger -- output produced by Prism is HTML-escaped
+        // dangerouslySetInnerHTML: output produced by Prism is HTML-escaped
         dangerouslySetInnerHTML={{ __html: html }}
       />
     </pre>
