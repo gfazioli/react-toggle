@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.0.1
+
+### Patch Changes
+
+- Update dev dependencies and build/test tooling to their latest major versions (ESLint 10, Vite 8, Vitest 4, TypeScript 6, jsdom 29, react-hooks 7). No runtime code or public API changes — the published bundle is functionally identical.
+
 All notable changes to this project will be documented in this file.
 
 This project follows [Semantic Versioning](https://semver.org/). From v4 onwards, releases are managed with [Changesets](https://github.com/changesets/changesets); entries in this file after v4.0.0 are generated automatically.
