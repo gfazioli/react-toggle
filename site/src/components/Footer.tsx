@@ -17,9 +17,7 @@ export function Footer() {
             GitHub
           </a>
           <a href={`${import.meta.env.BASE_URL}upgrade/`}>v3 → v4 guide</a>
-          <a href="https://github.com/sponsors/gfazioli" target="_blank" rel="noreferrer noopener">
-            Sponsor
-          </a>
+          <a href={`${import.meta.env.BASE_URL}#sponsors`}>Sponsor</a>
           <a
             href="https://github.com/gfazioli/react-toggle/blob/main/LICENSE"
             target="_blank"
