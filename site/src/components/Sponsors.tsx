@@ -1,4 +1,4 @@
-import { SPONSORS, SPONSOR_URL } from "../data/sponsors";
+import { DONATE_URL, SPONSORS, SPONSOR_URL } from "../data/sponsors";
 import "./Sponsors.css";
 
 export function Sponsors() {
@@ -48,6 +48,9 @@ export function Sponsors() {
         <div className="sponsors-cta">
           <a className="btn sponsors-btn" href={SPONSOR_URL} target="_blank" rel="noreferrer noopener">
             <span aria-hidden="true">❤</span> Become a sponsor
+          </a>
+          <a className="btn coffee-btn" href={DONATE_URL} target="_blank" rel="noreferrer noopener">
+            <span aria-hidden="true">☕</span> Buy me a coffee
           </a>
         </div>
       </div>

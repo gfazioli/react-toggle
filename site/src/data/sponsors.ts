@@ -12,3 +12,5 @@ export interface Sponsor {
 export const SPONSORS: Sponsor[] = [{ key: "kastov", name: "kastov", github: "kastov" }];
 
 export const SPONSOR_URL = "https://github.com/sponsors/gfazioli";
+
+export const DONATE_URL = "https://donate.stripe.com/fZu4gy4Tn3b1dgudGx0co00";
