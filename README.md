@@ -12,6 +12,12 @@
 [![downloads](https://img.shields.io/npm/dm/react-toggle-component?style=flat-square&color=6366f1)](https://www.npmjs.com/package/react-toggle-component)
 [![license](https://img.shields.io/npm/l/react-toggle-component?style=flat-square&color=6366f1)](./LICENSE)
 
+[![Share on X](https://img.shields.io/badge/X-000000?style=flat-square&logo=x&logoColor=white)](https://twitter.com/intent/tweet?text=react-toggle-component%20%E2%80%94%20the%20accessible%2C%20themeable%20React%20switch%20you%20actually%20want%20to%20ship.%20Zero%20runtime%20dependencies.&url=https%3A%2F%2Fgfazioli.github.io%2Freact-toggle%2F)
+[![Share on LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logoColor=white)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fgfazioli.github.io%2Freact-toggle%2F)
+[![Share on Facebook](https://img.shields.io/badge/Facebook-1877F2?style=flat-square&logo=facebook&logoColor=white)](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgfazioli.github.io%2Freact-toggle%2F)
+[![Share on Bluesky](https://img.shields.io/badge/Bluesky-0285FF?style=flat-square&logo=bluesky&logoColor=white)](https://bsky.app/intent/compose?text=react-toggle-component%20%E2%80%94%20the%20accessible%2C%20themeable%20React%20switch%20you%20actually%20want%20to%20ship.%20Zero%20runtime%20dependencies.%20https%3A%2F%2Fgfazioli.github.io%2Freact-toggle%2F)
+[![Share on Threads](https://img.shields.io/badge/Threads-000000?style=flat-square&logo=threads&logoColor=white)](https://www.threads.net/intent/post?text=react-toggle-component%20%E2%80%94%20the%20accessible%2C%20themeable%20React%20switch%20you%20actually%20want%20to%20ship.%20Zero%20runtime%20dependencies.%20https%3A%2F%2Fgfazioli.github.io%2Freact-toggle%2F)
+
 [**Live playground →**](https://gfazioli.github.io/react-toggle/) ・
 [**v3 → v4 guide →**](https://gfazioli.github.io/react-toggle/upgrade/) ・
 [**Changelog**](./CHANGELOG.md)
@@ -178,3 +184,18 @@ If this project saves you time, consider [sponsoring on GitHub](https://github.c
     <img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="Sponsor on GitHub" />
   </a>
 </p>
+
+---
+
+## Share
+
+If this project is useful to you, help spread the word:
+
+<p align="center">
+  <a href="https://twitter.com/intent/tweet?text=react-toggle-component%20%E2%80%94%20the%20accessible%2C%20themeable%20React%20switch%20you%20actually%20want%20to%20ship.%20Zero%20runtime%20dependencies.&amp;url=https%3A%2F%2Fgfazioli.github.io%2Freact-toggle%2F"><img src="https://img.shields.io/badge/X-000000?style=flat-square&logo=x&logoColor=white" alt="Share on X" /></a>
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fgfazioli.github.io%2Freact-toggle%2F"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logoColor=white" alt="Share on LinkedIn" /></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgfazioli.github.io%2Freact-toggle%2F"><img src="https://img.shields.io/badge/Facebook-1877F2?style=flat-square&logo=facebook&logoColor=white" alt="Share on Facebook" /></a>
+  <a href="https://bsky.app/intent/compose?text=react-toggle-component%20%E2%80%94%20the%20accessible%2C%20themeable%20React%20switch%20you%20actually%20want%20to%20ship.%20Zero%20runtime%20dependencies.%20https%3A%2F%2Fgfazioli.github.io%2Freact-toggle%2F"><img src="https://img.shields.io/badge/Bluesky-0285FF?style=flat-square&logo=bluesky&logoColor=white" alt="Share on Bluesky" /></a>
+  <a href="https://www.threads.net/intent/post?text=react-toggle-component%20%E2%80%94%20the%20accessible%2C%20themeable%20React%20switch%20you%20actually%20want%20to%20ship.%20Zero%20runtime%20dependencies.%20https%3A%2F%2Fgfazioli.github.io%2Freact-toggle%2F"><img src="https://img.shields.io/badge/Threads-000000?style=flat-square&logo=threads&logoColor=white" alt="Share on Threads" /></a>
+</p>
+
