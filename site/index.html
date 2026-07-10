@@ -39,11 +39,71 @@
     />
     <meta name="twitter:image" content="https://gfazioli.github.io/react-toggle/og-default.png" />
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "react-toggle-component",
+        "description": "Accessible, themeable React toggle/switch component — zero runtime dependencies, ARIA-compliant, CSS variables theming.",
+        "url": "https://gfazioli.github.io/react-toggle/",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Web Browser",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Person", "name": "Giovambattista Fazioli", "url": "https://github.com/gfazioli" },
+        "license": "https://opensource.org/licenses/MIT",
+        "sameAs": [
+          "https://github.com/gfazioli/react-toggle",
+          "https://www.npmjs.com/package/react-toggle-component"
+        ],
+        "keywords": "react, react-component, toggle, switch, checkbox, accessible, aria, css-modules"
+      }
+    </script>
+
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <style>
+      .seo-fallback {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin: 0;
+        padding: 2rem;
+        text-align: center;
+        font-family: Inter, system-ui, -apple-system, sans-serif;
+        background: #0a0a0a;
+        color: #e5e5e5;
+      }
+      .seo-fallback h1 { margin: 0; max-width: 22ch; font-size: clamp(1.75rem, 5vw, 3rem); line-height: 1.1; }
+      .seo-fallback p { margin: 0; max-width: 54ch; line-height: 1.6; color: #a3a3a3; }
+      .seo-fallback code { background: #1a1a1a; padding: 0.2em 0.5em; border-radius: 6px; }
+      .seo-fallback a { color: #fff; font-weight: 600; }
+      @media (prefers-color-scheme: light) {
+        .seo-fallback { background: #fff; color: #171717; }
+        .seo-fallback p { color: #525252; }
+        .seo-fallback code { background: #f0f0f0; }
+        .seo-fallback a { color: #000; }
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <!-- Static SEO / no-JS fallback: React (createRoot) clears #app and replaces this on mount. -->
+      <main class="seo-fallback">
+        <h1>The React switch you actually want to ship.</h1>
+        <p>
+          <strong>react-toggle-component</strong> — an accessible <code>role="switch"</code> toggle for React,
+          themeable via CSS variables, with zero runtime dependencies. Drop it in, theme it with one selector, ship it.
+        </p>
+        <p><code>npm install react-toggle-component</code></p>
+        <p>
+          <a href="https://www.npmjs.com/package/react-toggle-component">npm</a> ·
+          <a href="https://github.com/gfazioli/react-toggle">GitHub</a>
+        </p>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
