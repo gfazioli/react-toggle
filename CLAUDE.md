@@ -14,7 +14,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Tests**: vitest + jsdom + @testing-library/react + @testing-library/user-event
 - **Docs site**: custom Vite + React landing page in `site/` (no Storybook/Ladle — see *Layout* below)
 - **Package manager**: pnpm 9
-- **Release**: Changesets (CI workflow opens "Version Packages" PR; merging it publishes to npm)
+- **Release**: Changesets, **local only** — `release.yml` is disabled and `NPM_TOKEN` removed (decided 2026-06-02). Flow: add changeset → `pnpm changeset version` → commit/push → `pnpm release` → `git push origin --tags` → create the GitHub Release manually (the gfazioli.github.io cards read it). See the workspace `../CLAUDE.md` for details.
 
 ## Commands
 
@@ -31,7 +31,7 @@ pnpm site:preview # serve a built site-dist/ locally
 pnpm changeset    # add a changeset (run before each PR that changes published behavior)
 ```
 
-`prepublishOnly` runs typecheck + lint + test + build, so `pnpm publish` will not ship a broken artifact. The release workflow does the same on CI.
+`prepublishOnly` runs typecheck + lint + test + build, so `pnpm publish` will not ship a broken artifact.
 
 ## Architecture
 
@@ -77,7 +77,7 @@ CSS Modules are extracted by tsup/esbuild into `dist/index.css` and exposed via 
 - `tests/` — vitest specs
 - `site/` — multi-page Vite + React documentation site. Two HTML entries: `site/index.html` (landing → `pages/Landing.tsx`) and `site/upgrade/index.html` (migration page → `pages/UpgradePage.tsx`). Each gets its own bundle so `/upgrade/` does not pull in Builder/Presets code (~7 KB gz vs ~70 KB gz). Built artefacts: `site-dist/index.html` and `site-dist/upgrade/index.html` — directly servable by GH Pages, no SPA fallback needed. Imports `Toggle` from the package itself via Vite alias `react-toggle-component → ../src/index.ts`. Landing sections: Hero, Features, **live theme Builder** with URL-persisted config (`?t=base64`), Preset gallery, Examples, Install. Floating capsule nav with IntersectionObserver-driven active link; from the upgrade page the section links rewrite to `/<base>/#<id>` so they navigate back to the landing. SEO: per-page `<title>`, `<meta description>`, Open Graph + Twitter Card with `og-default.svg` (1200×630), `<link rel="canonical">`, plus `site/public/sitemap.xml` and `robots.txt`.
 - `.changeset/` — pending release notes
-- `.github/workflows/` — `ci.yml` (typecheck/lint/test/build/site-build), `deploy-docs.yml` (site → GH Pages on push to main), `release.yml` (Changesets publish)
+- `.github/workflows/` — `ci.yml` (typecheck/lint/test/build/site-build), `deploy-docs.yml` (site → GH Pages on push to main), `release.yml` (**disabled** — releases are local-only)
 - `dist/`, `site-dist/`, `coverage/` — build/test outputs, **gitignored**
 
 ## Conventions
