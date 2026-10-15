@@ -24,6 +24,11 @@
 
 </div>
 
+<div align="center">
+  <p><img src="https://raw.githubusercontent.com/gfazioli/gfazioli/master/glancecard/react-toggle.svg" width="880" alt="react-toggle at a glance, refreshed daily: commits, releases, stars, issues and pull requests, a year of commit activity, the weekly rhythm, languages, latest commits and releases, contributors" /><br>
+  <sub>Made with <a href="https://github.com/gfazioli/glancecard">glancecard</a> · refreshed daily</sub></p>
+</div>
+
 <br/>
 
 > `<input type="checkbox" role="switch">` under the hood. Theme it with one CSS selector. Zero runtime dependencies. ~3 KB gzipped.
