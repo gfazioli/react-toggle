@@ -9,7 +9,10 @@ export interface Sponsor {
   href?: string;
 }
 
-export const SPONSORS: Sponsor[] = [{ key: "kastov", name: "kastov", github: "kastov" }];
+export const SPONSORS: Sponsor[] = [
+  { key: "kastov", name: "kastov", github: "kastov" },
+  { key: "guimazza", name: "guimazza", github: "guimazza" },
+];
 
 export const SPONSOR_URL = "https://github.com/sponsors/gfazioli";
 
