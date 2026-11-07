@@ -17,6 +17,9 @@ export function Footer() {
           <a href="https://github.com/gfazioli/react-toggle" target="_blank" rel="noreferrer noopener">
             GitHub
           </a>
+          <a href="https://discord.gg/rdWu5yFCR6" target="_blank" rel="noreferrer noopener">
+            Discord
+          </a>
           <a href={`${import.meta.env.BASE_URL}upgrade/`}>v3 → v4 guide</a>
           <a href={`${import.meta.env.BASE_URL}#sponsors`}>Sponsor</a>
           <a
